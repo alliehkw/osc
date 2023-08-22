@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar.js";
+import Footer from "./components/Footer.js";
 import Home from "./components/home/Home.js";
 import PatientEducation from "./components/patient-education/PatientEducation";
 import OnsiteTherapy from "./components/onsite-therapy/OnsiteTherapy.js";
@@ -16,6 +17,7 @@ function App() {
           <Route path="/onsite-therapy" element={<OnsiteTherapy />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }
