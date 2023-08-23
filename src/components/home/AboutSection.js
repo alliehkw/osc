@@ -1,7 +1,13 @@
-function AboutSection() {
+function AboutSection({ data }) {
+  const aboutSection = data.homePage.nodes[0].aboutSection;
+  // TO DO: why is the rich text returning with p tags?
+  // console.log(aboutSection);
   return (
     <div className="about-section-container">
-      <p>AboutSection</p>
+      {/* TO DO: need to figure out how to add in the hyperlinks to the text */}
+      <p>{aboutSection}</p>
+      <button>MAKE AN APPOINTMENT</button>
+      <button>LEARN MORE ABOUT OUR SPECIALISTS</button>
     </div>
   );
 }

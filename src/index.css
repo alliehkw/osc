@@ -1,3 +1,11 @@
+:root {
+  --brand-color: #008771;
+  --white: #FFFFFF;
+  --heading-text: #03201B;
+  --body-text: #1C3A49;
+  --secondary-bg: #F0F6F9;
+}
+
 body {
   margin: 0;
 }
@@ -7,10 +15,19 @@ code {
     monospace;
 }
 
-:root {
-  --brand-color: #008771;
-  --white: #FFFFFF;
-  --heading-text: #03201B;
-  --body-text: #1C3A49;
-  --secondary-bg: #F0F6F9;
+.App {
+  background-color: var(--brand-color);
 }
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar-container li {
+  list-style-type: none;
+}
+
+
