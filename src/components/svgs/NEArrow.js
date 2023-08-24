@@ -8,12 +8,12 @@ function NEArrow() {
       fill="none"
       className="svg-arrow-NE"
     >
-      <g clip-path="url(#clip0_104_1136)">
+      <g clipPath="url(#clip0_104_1136)">
         <path
           d="M17.5 7L7.5 17"
           stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M8.5 7H17.5V16"

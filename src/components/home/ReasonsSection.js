@@ -1,12 +1,11 @@
 function ReasonsSection({ data }) {
   const header = data.homePage.nodes[0].reasonsSectionHeader;
-  console.log(data);
   // TO DO: get the ratings in the right order once I can talk to Atlas customer service
   let counter = 0;
   const reasonsBlock = data.reasons.nodes.map((reason) => {
     counter++;
     return (
-      <div className="reason-block">
+      <div className="reason-block" key={`${counter}`}>
         <div className="reasons-image">
           <img
             src={reason.reasonImage.mediaItemUrl}

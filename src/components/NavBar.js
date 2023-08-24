@@ -1,8 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
-import { FaAngleDown } from "react-icons/fa";
 import DownCarrot from "./svgs/DownCarrot.js";
-import { FaPhoneVolume } from "react-icons/fa6";
 
 const nav_bar_data = gql`
   {
@@ -20,7 +18,6 @@ const nav_bar_data = gql`
 
 function NavBar() {
   const { loading, error, data } = useQuery(nav_bar_data);
-  console.log(data);
   return (
     <>
       {!loading ? (

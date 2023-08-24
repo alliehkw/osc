@@ -4,7 +4,7 @@ function RatingSection({ data }) {
   // TO DO: get the ratings in the right order once I can talk to Atlas customer service
   const ratingsBlock = data.ratings.nodes.map((rating) => {
     return (
-      <div className="ratings-block">
+      <div className="ratings-block" key={rating.statistic}>
         <div className="ratings-circle">
           <p>{rating.statistic}</p>
         </div>

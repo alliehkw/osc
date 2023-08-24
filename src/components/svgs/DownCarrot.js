@@ -8,12 +8,12 @@ function DownCarrot() {
       fill="none"
       className="down-carrot"
     >
-      <g clip-path="url(#clip0_742_100)">
+      <g clipPath="url(#clip0_742_100)">
         <path
           d="M4.16699 6L8.16699 10L12.167 6"
           stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
