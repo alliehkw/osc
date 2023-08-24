@@ -31,12 +31,23 @@ const home_data = gql`
           altText
         }
         ratingSectionHeader
+        reasonsSectionHeader
       }
     }
     ratings {
       nodes {
         statistic
         statisticExplaination
+      }
+    }
+    reasons {
+      nodes {
+        reasonTitle
+        reasonExplaination
+        reasonImage {
+          mediaItemUrl
+          altText
+        }
       }
     }
   }
@@ -52,7 +63,7 @@ function Home() {
           <Hero data={data} />
           <AboutSection data={data} />
           <RatingSection data={data} />
-          <ReasonsSection />
+          <ReasonsSection data={data} />
           <Testimonials />
           <Accolades />
           <LatestNews />
