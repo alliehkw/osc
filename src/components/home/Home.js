@@ -6,8 +6,6 @@ import Testimonials from "./Testimonals.js";
 import Accolades from "./Accolades.js";
 import LatestNews from "./LatestNews.js";
 import { useQuery, gql } from "@apollo/client";
-// import React, { useEffect } from "react";
-// TO DO: switch from a content module to a page?
 
 const home_data = gql`
   {
@@ -32,6 +30,13 @@ const home_data = gql`
           mediaItemUrl
           altText
         }
+        ratingSectionHeader
+      }
+    }
+    ratings {
+      nodes {
+        statistic
+        statisticExplaination
       }
     }
   }
@@ -46,7 +51,7 @@ function Home() {
         <div className="home-container">
           <Hero data={data} />
           <AboutSection data={data} />
-          <RatingSection />
+          <RatingSection data={data} />
           <ReasonsSection />
           <Testimonials />
           <Accolades />

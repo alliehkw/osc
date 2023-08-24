@@ -44,6 +44,8 @@ h2 {
   font-family: petersburg-web, serif;
   font-style: normal;
   font-weight: 400;
+  color: var(--dark-blue);
+  margin: 0;
 }
 
 h3 {
@@ -68,6 +70,7 @@ h5 {
   font-family: apertura, sans-serif;
   font-style: normal;
   font-weight: 500;
+  color: var(--dark-blue);
 }
 
 h6 {
@@ -209,7 +212,8 @@ p {
 .about-section-text {
   width: 792px;
   margin: auto;
-  padding: 88px;
+  padding-top: 88px;
+  padding-bottom: 96px;
 }
 
 .about-section-buttons button {
@@ -232,7 +236,8 @@ p {
   align-items: center;
   border-radius: 2px;
   position: relative;
-  margin: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .image-wrapper img {
@@ -261,4 +266,50 @@ p {
   margin: 0;
 }
 
+/* RATING SECTION */
+
+.rating-section-container {
+  background-color: var(--secondary-bg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rating-section-container h2 {
+  padding-top: 96px;
+  padding-bottom: 56px;
+  width: 792px;
+  margin: auto;
+}
+
+.ratings {
+  display: flex;
+  justify-content: center;
+}
+
+.ratings-block {
+  width: 358px;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding: 40px;
+}
+
+.ratings-circle {
+  background-color: var(--brand-color);
+  width: 42px;
+  height: 48px;
+  padding: 40px;
+  border-radius: 100px;
+  margin: auto;
+  color: var(--white);
+}
+
+.rating-section-container p {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: petersburg-web, serif;
+  font-style: normal;
+  font-weight: 400;
+}
 
