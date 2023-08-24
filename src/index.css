@@ -1,5 +1,6 @@
 :root {
   --brand-color: #008771;
+  --dark-blue: #112E3D;
   --white: #FFFFFF;
   --heading-text: #03201B;
   --body-text: #1C3A49;
@@ -13,6 +14,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  color: var(--body-text);
 }
 
 code {
@@ -104,19 +106,23 @@ button {
   font-style: normal;
   font-weight: 700;
   border-radius: 2px;
-  border-style: solid;
-  border-color: var(--brand-color);
-  padding: 10px;
+  border: solid 1px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 button.green {
   background-color: var(--brand-color);
   color: var(--white);
+  border-color: var(--brand-color);
 }
 
 button.white {
   background-color: var(--white);
-  color: var(--brand-color);
+  color: var(--dark-blue);
+  border-color: --dark-blue;
 }
 
 button.transparent {
@@ -140,6 +146,7 @@ p {
   overflow: hidden;
   z-index: 3;
   width: 100%; 
+  margin-top: 20px;
 }
 
 .navbar-split {
@@ -150,33 +157,44 @@ p {
 .logo-container {
   display: flex;
   align-items: center;
-  margin: 20px;
+  padding: 0px 0.002px 0px 0.016px;
+  margin-right: 20px;
+  margin-left: 120px;
 }
 
 .navbar-container li {
   list-style-type: none;
 }
+
 .navbar-text-with-icon {
   display: flex;
   align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
-.navbar-container button {
-  margin-left: 20px;
+.nav-buttons {
+  display: flex;
+  margin-right: 104px;
+}
+
+.nav-buttons button{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-right: 16px;
 }
 
 /* ICONS */
-.icon-angle-down, .icon-phone {
-  color: var(--white);
-  margin: 5px;
+.down-carrot {
+  margin-left: 4px;
+  margin-right: 16px;
 }
 
-.icon-arrow-NE {
-  color: var(--white);
-  margin: 5px;
-  font-size: 30px;
+.svg-arrow-NE {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  padding: 30px;
+  margin: 0;
 }
 
 /* HOMEPAGE SECTIONS */
@@ -194,17 +212,17 @@ p {
   padding: 88px;
 }
 
-.about-section-text p, button {
-  margin: 20px;
+.about-section-buttons button {
+  margin: 8px;
+  margin-top: 40px;
 }
 
 .about-section-images {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
-  margin-bottom: 100px;
+  justify-content: center;
+  margin-bottom: 96px;
 }
-
 
 .about-section-image {
   width: 384px;
@@ -212,14 +230,25 @@ p {
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  border-radius: 3px;
+  border-radius: 2px;
   position: relative;
+  margin: 12px;
 }
 
-.about-section-image img {
+.image-wrapper img {
+  width: 384px;
+  height: 320px;
+  vertical-align: middle;
+}
+
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  z-index: 1;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .about-section-image h5 {
@@ -228,17 +257,7 @@ p {
   left: 0;
   z-index: 2;
   color: var(--white);
-  padding: 8px;
-  margin: 0;
-}
-
-.about-section-image .icon-arrow-NE {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-  color: var(--white);
-  padding: 8px;
+  padding: 30px;
   margin: 0;
 }
 

@@ -1,4 +1,4 @@
-import { FiArrowUpRight } from "react-icons/fi";
+import NEArrow from "../svgs/NEArrow.js";
 
 function AboutSection({ data }) {
   const aboutSectionTop = data.homePage.nodes[0].aboutSectionTop;
@@ -21,31 +21,43 @@ function AboutSection({ data }) {
       <div className="about-section-text">
         {/* TO DO: need to figure out how to add in the hyperlinks to the text */}
         <p>{aboutSectionTop}</p>
+        <br></br>
         <p>{aboutSectionBottom}</p>
-        <button className="green">MAKE AN APPOINTMENT</button>
-        <button className="white">LEARN MORE ABOUT OUR SPECIALISTS</button>
+        <div className="about-section-buttons">
+          <button className="green">MAKE AN APPOINTMENT</button>
+          <button className="white">LEARN MORE ABOUT OUR SPECIALISTS</button>
+        </div>
       </div>
       <div className="about-section-images">
         <div className="about-section-image">
-          <img src={aboutSectionImageHip.url} alt={aboutSectionImageHip.alt} />
+          <div className="image-wrapper">
+            <img
+              src={aboutSectionImageHip.url}
+              alt={aboutSectionImageHip.alt}
+            />
+          </div>
           <h5>Hip</h5>
-          <FiArrowUpRight className="icon-arrow-NE" />
+          <NEArrow />
         </div>
         <div className="about-section-image">
-          <img
-            src={aboutSectionImageKnee.url}
-            alt={aboutSectionImageKnee.alt}
-          />
+          <div className="image-wrapper">
+            <img
+              src={aboutSectionImageKnee.url}
+              alt={aboutSectionImageKnee.alt}
+            />
+          </div>
           <h5>Knee</h5>
-          <FiArrowUpRight className="icon-arrow-NE" />
+          <NEArrow />
         </div>
         <div className="about-section-image">
-          <img
-            src={aboutSectionImageShoulder.url}
-            alt={aboutSectionImageShoulder.alt}
-          />
+          <div className="image-wrapper">
+            <img
+              src={aboutSectionImageShoulder.url}
+              alt={aboutSectionImageShoulder.alt}
+            />
+          </div>
           <h5>Shoulder</h5>
-          <FiArrowUpRight className="icon-arrow-NE" />
+          <NEArrow />
         </div>
       </div>
     </div>

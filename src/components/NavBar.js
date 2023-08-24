@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 import { FaAngleDown } from "react-icons/fa";
+import DownCarrot from "./svgs/DownCarrot.js";
 import { FaPhoneVolume } from "react-icons/fa6";
 
 const nav_bar_data = gql`
@@ -43,7 +44,7 @@ function NavBar() {
               {/* <Link to="/about"> */}
               <div className="navbar-text-with-icon">
                 <p className="allCaps">ABOUT</p>
-                <FaAngleDown class="icon-angle-down" />
+                <DownCarrot />
               </div>
               {/* </Link> */}
             </li>
@@ -51,7 +52,7 @@ function NavBar() {
               <Link to="/education">
                 <div className="navbar-text-with-icon">
                   <p className="allCaps">EDUCATION</p>
-                  <FaAngleDown class="icon-angle-down" />
+                  <DownCarrot />
                 </div>
               </Link>
             </li>
@@ -59,7 +60,7 @@ function NavBar() {
               <Link to="/onsite-therapy">
                 <div className="navbar-text-with-icon">
                   <p className="allCaps">THERAPY</p>
-                  <FaAngleDown class="icon-angle-down" />
+                  <DownCarrot />
                 </div>
               </Link>
             </li>
@@ -68,26 +69,33 @@ function NavBar() {
               {/* <Link to="/resources"> */}
               <div className="navbar-text-with-icon">
                 <p className="allCaps">RESOURCES</p>
-                <FaAngleDown class="icon-angle-down" />
+                <DownCarrot />
               </div>
               {/* </Link> */}
             </li>
           </div>
           <div className="navbar-split">
-            <li>
+            {/* QUSETION: no phone number in nav? */}
+            {/* <li>
               <div className="navbar-text-with-icon">
                 <FaPhoneVolume class="icon-phone" />
                 <p className="allCaps">
                   {data.allNavBar.nodes[0].oSCPhoneNumber}
                 </p>
               </div>
-            </li>
-            <li>
-              <button className="transparent">REFER A PATIENT</button>
-            </li>
-            <li>
-              <button className="green">REQUEST AN APPOINTMENT</button>
-            </li>
+            </li> */}
+            <div className="nav-buttons">
+              <li>
+                <button id="navbutton" className="transparent">
+                  REFER A PATIENT
+                </button>
+              </li>
+              <li>
+                <button id="navbutton" className="green">
+                  REQUEST AN APPOINTMENT
+                </button>
+              </li>
+            </div>
           </div>
           <Outlet />
         </div>
