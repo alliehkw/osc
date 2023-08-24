@@ -14,10 +14,23 @@ const home_data = gql`
     homePage {
       nodes {
         tagLine
-        aboutSection
         heroVideoURL
         heroVideoPoster {
           mediaItemUrl
+        }
+        aboutSectionBottom
+        aboutSectionTop
+        aboutSectionImageHip {
+          mediaItemUrl
+          altText
+        }
+        aboutSectionImageKnee {
+          mediaItemUrl
+          altText
+        }
+        aboutSectionImageShoulder {
+          mediaItemUrl
+          altText
         }
       }
     }

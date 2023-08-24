@@ -1,6 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
-import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 

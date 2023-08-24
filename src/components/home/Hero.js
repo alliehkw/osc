@@ -14,7 +14,7 @@ function Hero({ data }) {
           justifyContent: "center",
           alignItems: "center",
           position: "absolute",
-          top: 208,
+          top: 160,
           width: "100%",
           zIndex: "2",
         }}

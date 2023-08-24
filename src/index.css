@@ -103,10 +103,10 @@ button {
   font-family: apertura, sans-serif;
   font-style: normal;
   font-weight: 700;
-  border-radius: 1px;
+  border-radius: 2px;
   border-style: solid;
   border-color: var(--brand-color);
-  padding: 5px;
+  padding: 10px;
 }
 
 button.green {
@@ -125,14 +125,18 @@ button.transparent {
   color: var(--white);
 }
 
+p {
+  margin: 0;
+}
 
 /* NAVBAR */
+/* QUESTION: do you want the navbar to be sticky? do you want it to change colors while you scroll? */
 .navbar-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   z-index: 3;
   width: 100%; 
@@ -168,3 +172,74 @@ button.transparent {
   color: var(--white);
   margin: 5px;
 }
+
+.icon-arrow-NE {
+  color: var(--white);
+  margin: 5px;
+  font-size: 30px;
+}
+
+/* HOMEPAGE SECTIONS */
+
+.about-section-container {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-section-text {
+  width: 792px;
+  margin: auto;
+  padding: 88px;
+}
+
+.about-section-text p, button {
+  margin: 20px;
+}
+
+.about-section-images {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+
+.about-section-image {
+  width: 384px;
+  height: 320px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  position: relative;
+}
+
+.about-section-image img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.about-section-image h5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  color: var(--white);
+  padding: 8px;
+  margin: 0;
+}
+
+.about-section-image .icon-arrow-NE {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  color: var(--white);
+  padding: 8px;
+  margin: 0;
+}
+
+
