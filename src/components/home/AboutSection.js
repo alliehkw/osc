@@ -6,8 +6,8 @@ function AboutSection({ data }) {
     <div className="about-section-container">
       {/* TO DO: need to figure out how to add in the hyperlinks to the text */}
       <p>{aboutSection}</p>
-      <button>MAKE AN APPOINTMENT</button>
-      <button>LEARN MORE ABOUT OUR SPECIALISTS</button>
+      <button className="green">MAKE AN APPOINTMENT</button>
+      <button className="white">LEARN MORE ABOUT OUR SPECIALISTS</button>
     </div>
   );
 }

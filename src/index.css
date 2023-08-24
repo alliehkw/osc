@@ -8,6 +8,11 @@
 
 body {
   margin: 0;
+  font-family: apertura, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 code {
@@ -19,15 +24,147 @@ code {
   background-color: var(--brand-color);
 }
 
+/* TYPEOGRAPHY  */
+
+/* TO DO: the typography doc says h1 should be 64/68 but in the mock up it says its 70 --> which is correct?  */
+h1 {
+  font-size: 70px;
+  line-height: 74px;
+  font-family: petersburg-web, serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--white);
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 52px;
+  font-family: petersburg-web, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 40px;
+  font-family: petersburg-web, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 26px;
+  line-height: 32px;
+  font-family: apertura, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: apertura, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: apertura, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+p.subtext {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: apertura, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+p.allCaps {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: apertura, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: apertura, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 1px;
+  border-style: solid;
+  border-color: var(--brand-color);
+  padding: 5px;
+}
+
+button.green {
+  background-color: var(--brand-color);
+  color: var(--white);
+}
+
+button.white {
+  background-color: var(--white);
+  color: var(--brand-color);
+}
+
+button.transparent {
+  background-color: transparent;
+  border-color: var(--white);
+  color: var(--white);
+}
+
+
+/* NAVBAR */
 .navbar-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  position: fixed;
+  overflow: hidden;
+  z-index: 3;
+  width: 100%; 
+}
+
+.navbar-split {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
 }
 
 .navbar-container li {
   list-style-type: none;
 }
+.navbar-text-with-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
+.navbar-container button {
+  margin-left: 20px;
+}
 
+/* ICONS */
+.icon-angle-down, .icon-phone {
+  color: var(--white);
+  margin: 5px;
+}

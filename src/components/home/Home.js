@@ -15,6 +15,10 @@ const home_data = gql`
       nodes {
         tagLine
         aboutSection
+        heroVideoURL
+        heroVideoPoster {
+          mediaItemUrl
+        }
       }
     }
   }
