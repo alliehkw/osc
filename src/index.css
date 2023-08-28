@@ -86,8 +86,6 @@
 body {
   margin: 0;
   font-family: 'Apertura, Regular';
-  font-size: 20px;
-  line-height: 30px;
   color: var(--body-text);
 }
 
@@ -100,11 +98,10 @@ code {
   background-color: var(--brand-color);
 }
 
-
-/* TO DO: the typography doc says h1 should be 64/68 but in the mock up it says its 70 --> which is correct?  */
+/* QUESTION: the typography doc says h1 should be 64/68 but in the mock up it says its 70 --> which is correct?  */
 h1 {
-  font-size: 70px;
-  line-height: 74px;
+  font-size: 4.375em;
+  line-height: 106.25%;
   font-family: 'Petersburg, Regular';
   font-weight: 400;
   font-style: normal;
@@ -112,8 +109,8 @@ h1 {
 }
 
 h2 {
-  font-size: 48px;
-  line-height: 108.333%;
+  font-size: 3em;
+  line-height: 108.33%;
   font-family: 'Petersburg, Regular';
   font-style: normal;
   font-weight: 400;
@@ -122,29 +119,29 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 2.25em;
+  line-height: 111.11%;
   font-family: 'Petersburg, Regular';
 }
 
 h4 {
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 1.625em;
+  line-height: 120%;
   font-family: 'Apertura, Medium';
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 150%;
   font-weight: 450;
   font-family: 'Apertura, Regular';
-  letter-spacing: -0.8px;
+  letter-spacing: -0.05em;
   color: var(--dark-blue);
   margin: 0;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 150%;
   font-family: 'Apertura, Regular';
   font-family: 'Apertura, Regular';
@@ -155,22 +152,24 @@ h6 {
 
 p {
   font-family: 'Apertura, Regular';
+  font-size: 1.25em;
+  line-height: 150%;
 }
 
 p.subtext {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1em;
+  line-height: 125%;
   font-family: 'Apertura, Regular';
   color: var(--white);
 }
 
 p.allCaps {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875em;
+  line-height: 142.857%;
   font-family: 'Apertura, Regular';
   font-weight: 450;
   text-transform: uppercase;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.0875em;
   color: var(--white);
 }
 
@@ -179,18 +178,18 @@ a {
 }
 
 button {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 0.9375em;
+  line-height: 106.667%;
   font-family: 'Apertura, Regular';
-  letter-spacing: 0.75px;
+  letter-spacing: 0.046875em;
   text-transform: uppercase;
   font-weight: 450;
-  border-radius: 2px;
-  border: solid 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  border-radius: 0.125em;
+  border: solid 0.0625em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 button.green {
@@ -220,13 +219,13 @@ p {
 .navbar-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   position: absolute;
   overflow: hidden;
   z-index: 3;
-  width: 100%; 
-  margin-top: 20px;
+  width: 100vw; 
+  margin-top: 1.25em;
 }
 
 .navbar-split {
@@ -237,9 +236,7 @@ p {
 .logo-container {
   display: flex;
   align-items: center;
-  padding: 0px 0.002px 0px 0.016px;
-  margin-right: 30px;
-  margin-left: 120px;
+  margin-right: 1.875em;
 }
 
 .navbar-container li {
@@ -253,19 +250,20 @@ p {
 
 .nav-buttons {
   display: flex;
-  margin-right: 104px;
 }
 
 .nav-buttons button{
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-right: 16px;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-right: 1em;
 }
 
 /* ICONS */
 .down-carrot {
-  margin-left: 4px;
-  margin-right: 16px;
+  margin-left: 0.25em;
+  margin-right: 1em;
 }
 
 .svg-arrow-NE {
@@ -273,15 +271,15 @@ p {
   bottom: 0;
   right: 0;
   z-index: 2;
-  padding: 30px;
+  padding: 1.875em;
   margin: 0;
 }
 
 /* HERO */
 
-.hero-container {
-  height: 824px;
-}
+/* .hero-container {
+  height: 51.5em;
+} */
 
 /* TO DO: adjust poster and video so that the image always sits on the same spot of the page */
 /* TO DO: get rid of double click to play video */
@@ -297,38 +295,38 @@ p {
 }
 
 .about-section-text {
-  width: 792px;
+  width: 49.5em;
   margin: auto;
-  padding-top: 88px;
-  padding-bottom: 96px;
+  padding-top: 5.5em;
+  padding-bottom: 6em;
 }
 
 .about-section-buttons button {
-  margin: 8px;
-  margin-top: 40px;
+  margin: 0.5em;
+  margin-top: 2.5em;
 }
 
 .about-section-images {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-bottom: 96px;
+  margin-bottom: 6em;
 }
 
 .about-section-image {
-  width: 384px;
-  height: 320px;
+  width: 24em;
+  height: 20em;
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  border-radius: 2px;
+  border-radius: 0.125em;
   position: relative;
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 0.375em;
+  margin-right: 0.375em;
 }
 
 .image-wrapper img {
-  height: 320px;
+  height: 20em;
   vertical-align: middle;
 }
 
@@ -338,7 +336,7 @@ p {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
@@ -348,7 +346,7 @@ p {
   left: 0;
   z-index: 2;
   color: var(--white);
-  padding: 30px;
+  padding: 1.875em;
   margin: 0;
 }
 
@@ -365,37 +363,37 @@ p {
 .rating-section-container h2 {
   padding-top: 96px;
   padding-bottom: 56px;
-  width: 792px;
+  width: 50%;
   margin: auto;
 }
 
 .ratings {
   display: flex;
   justify-content: center;
-  padding-bottom: 96px;
+  padding-bottom: 6em;
+  padding-left: 6em;
+  padding-right: 6em;
 }
 
 .ratings-block {
-  width: 358px;
-  margin-left: 32px;
-  margin-right: 32px;
-  padding: 40px;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .ratings-circle {
   background-color: var(--brand-color);
-  width: 42px;
-  height: 48px;
-  padding: 40px;
-  border-radius: 100px;
+  width: 2.625em;
+  height: 3em;
+  padding: 2.5em;
+  border-radius: 6.25em;
   margin: auto;
   color: var(--white);
-  margin-bottom: 35px;
+  margin-bottom: 2.1875em;
 }
 
 .rating-section-container p {
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 2.5em;
+  line-height: 120%;
   font-family: 'Petersburg, Regular';
   font-style: normal;
   font-weight: 400;
@@ -457,10 +455,10 @@ p {
 
 .read-more {
   font-family: 'Apertura, Regular';
-  font-size: 15px;
+  font-size: 0.9375em;
+  line-height: 106.667%;
   font-style: normal;
   font-weight: 450;
-  line-height: 106.667%;
   letter-spacing: 0.75px;
   text-transform: uppercase;
   color: var(--brand-color);
@@ -514,10 +512,10 @@ p {
 
 p.footer-header {
   color: var(--light-grey);
-  font-size: 14px;
+  font-size: 0.9375em;
   font-style: normal;
   font-weight: 450;
-  line-height: 20px;
+  line-height: 142.857%;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -531,10 +529,10 @@ p.footer-header {
 
 .footer-bottom p {
   color: var( --light-grey);
-  font-size: 16px;
+  font-size: 1em;
+  line-height: 150%;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
 }
 
 .footer-bottom p.privacy-policy {
