@@ -508,6 +508,7 @@ p {
 
 .testimonials-container-right {
   width: 36.75em;
+  position: relative;
 }
 
 .testimonial-block {
@@ -541,6 +542,8 @@ p {
 .testimonial p.review {
   color: var(--dark-blue);
   margin-bottom: 1.5em;
+  max-height: 15em;
+  overflow: auto;
 }
 
 .testimonial p.reviewName {
@@ -553,6 +556,29 @@ p {
 
 .testimonial p.allCaps {
   color: var(--medium-grey);
+}
+
+.arrows {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  bottom: -2em;
+  right: 2em;
+  justify-content: space-between;
+}
+
+button.back-arrow {
+  background-color: var(--white);
+  width: 3.5em;
+  height: 3.5em;
+  margin-right: 1em;
+}
+
+button.front-arrow {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+  width: 3.5em;
+  height: 3.5em;
 }
 
 /* FOOTER */
