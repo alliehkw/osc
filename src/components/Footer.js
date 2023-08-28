@@ -7,7 +7,7 @@ function Footer({ data }) {
   const phone1 = data.allFooter.nodes[0].oSCPhoneNumber1;
   const phone2 = data.allFooter.nodes[0].oSCPhoneNumber2;
   const hours = data.allFooter.nodes[0].oSCHours;
-  console.log(data);
+
   return (
     <div className="footer-container">
       <div className="footer-logo">
