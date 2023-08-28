@@ -11,7 +11,6 @@
   --medium-grey: #586C75;
   --black: #000;
   --star-size: 1.5em;
-  --star-color: #c3c6c7;
   --star-background: #FCBD06;
 }
 
@@ -503,7 +502,7 @@ p {
 .review-button-container h5 {
   margin-top: 0.75em;
   margin-bottom: 1.5em;
-  width: 24em;
+  width: 19.2em;
 }
 
 .testimonials-container-right {
@@ -516,11 +515,24 @@ p {
   height: 100%;
 }
 
-.testimonial {
+#testimonial {
   display: flex;
   flex-direction: column;
   text-align: left;
   padding: 2.5em;
+}
+
+.testimonial {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
 }
 
 .stars {
@@ -532,21 +544,21 @@ p {
   &::before {
     content: '★★★★★';
     letter-spacing: 3px;
-    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--light-grey) var(--percent));
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   margin-bottom: 1.5em;
 }
 
-.testimonial p.review {
+#testimonial p.review {
   color: var(--dark-blue);
   margin-bottom: 1.5em;
   max-height: 15em;
   overflow: auto;
 }
 
-.testimonial p.reviewName {
+#testimonial p.reviewName {
   font-family: 'Apertura, Regular';
   font-size: 1.25em;
   font-weight: 450;
@@ -554,7 +566,7 @@ p {
   color: var(--black);
 }
 
-.testimonial p.allCaps {
+#testimonial p.allCaps {
   color: var(--medium-grey);
 }
 
@@ -580,7 +592,6 @@ button.front-arrow {
   width: 3.5em;
   height: 3.5em;
 }
-
 /* FOOTER */
 
 .footer-container {

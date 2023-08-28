@@ -10,42 +10,6 @@ function Testimonials({ data }) {
     data.homePage.nodes[0].reviewButtonExplanation;
   const testimonials = data.testimonials.nodes;
 
-  // const formatDate = (inputDate) => {
-  //   const options = { year: "numeric", month: "long", day: "numeric" };
-  //   return new Date(inputDate).toLocaleDateString(undefined, options);
-  // };
-
-  // const TestimonialsRotator = ({ testimonials }) => {
-  //   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       setCurrentTestimonialIndex(
-  //         (prevIndex) => (prevIndex + 1) % testimonials.length
-  //       );
-  //     }, 15000); // 15 seconds
-
-  //     return () => {
-  //       clearInterval(interval);
-  //     };
-  //   }, [testimonials.length]);
-
-  //   const currentTestimonial = testimonials[currentTestimonialIndex];
-  //   const formattedDate = formatDate(currentTestimonial.reviewDate);
-
-  //   return (
-  //     <div className="testimonial">
-  //       <div
-  //         className="stars"
-  //         style={{ "--stars": currentTestimonial.stars }}
-  //       ></div>
-  //       <p className="review">{currentTestimonial.review}</p>
-  //       <p className="reviewName">{currentTestimonial.name}</p>
-  //       <p className="allCaps">{formattedDate}</p>
-  //     </div>
-  //   );
-  // };
-
   function handleForwardClick(currentIndex, setCurrentIndex) {
     const nextIndex = (currentIndex + 1) % testimonials.length;
     setCurrentIndex(nextIndex);
