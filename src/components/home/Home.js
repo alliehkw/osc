@@ -58,6 +58,16 @@ function Home() {
 
   return (
     <>
+      {/* <h1>H1 Test</h1>
+      <h2>H2 Test</h2>
+      <h3>H3 Test</h3>
+      <h4>H4 Test</h4>
+      <h5>H5 Test</h5>
+      <h6>H6 Test</h6>
+      <p>Body Test</p>
+      <p className="allCaps">allCaps Test</p>
+      <p className="subtext">subtext Test</p>
+      <button>Button Test</button> */}
       {!loading ? (
         <div className="home-container">
           <Hero data={data} />

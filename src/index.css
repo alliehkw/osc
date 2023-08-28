@@ -9,11 +9,83 @@
   --light-grey: #8AA0AA;
 }
 
+/* TYPEOGRAPHY  */
+@font-face {
+  font-family: "Petersbug, Regular";
+  src:
+    url("./fonts/Petersburg/Regular.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Petersbug, Regular, Obliq";
+  src:
+    url("./fonts/Petersburg/Obliq.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Petersbug, Regular, Bold";
+  src:
+    url("./fonts/Petersburg/Bold.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Petersbug, Regular, Obliq, Obliq";
+  src:
+    url("./fonts/Petersburg/Bold_Obliq.otf") format("opentype")
+}
+
+
+@font-face {
+  font-family: "Apertura, Regular";
+  src:
+    url("./fonts/Apertura/Regular.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Apertura, Regular, Obliq";
+  src:
+    url("./fonts/Apertura/Obliq.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Apertura, Medium";
+  src:
+    url("./fonts/Apertura/Medium.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Apertura, Medium, Obliq";
+  src:
+    url("./fonts/Apertura/Medium_Obliq.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Apertura, Bold";
+  src:
+    url("./fonts/Apertura/Bold.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Apertura, Bold, Obliq";
+  src:
+    url("./fonts/Apertura/Bold_Obliq.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Apertura, Black";
+  src:
+    url("./fonts/Apertura/Black.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Apertura, Black, Obliq";
+  src:
+    url("./fonts/Apertura/Black_Obliq.otf") format("opentype")
+}
+
 body {
   margin: 0;
-  font-family: apertura, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Apertura, Regular';
   font-size: 20px;
   line-height: 30px;
   color: var(--body-text);
@@ -28,22 +100,21 @@ code {
   background-color: var(--brand-color);
 }
 
-/* TYPEOGRAPHY  */
 
 /* TO DO: the typography doc says h1 should be 64/68 but in the mock up it says its 70 --> which is correct?  */
 h1 {
   font-size: 70px;
   line-height: 74px;
-  font-family: petersburg-web, serif;
-  font-style: normal;
+  font-family: 'Petersburg, Regular';
   font-weight: 400;
+  font-style: normal;
   color: var(--white);
 }
 
 h2 {
   font-size: 48px;
-  line-height: 52px;
-  font-family: petersburg-web, serif;
+  line-height: 108.333%;
+  font-family: 'Petersburg, Regular';
   font-style: normal;
   font-weight: 400;
   color: var(--dark-blue);
@@ -53,53 +124,53 @@ h2 {
 h3 {
   font-size: 36px;
   line-height: 40px;
-  font-family: petersburg-web, serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Petersburg, Regular';
 }
 
 h4 {
   font-size: 26px;
   line-height: 32px;
-  font-family: apertura, sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  font-family: 'Apertura, Medium';
 }
 
 h5 {
   font-size: 20px;
-  line-height: 24px;
-  font-family: apertura, sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  line-height: 150%;
+  font-weight: 450;
+  font-family: 'Apertura, Regular';
+  letter-spacing: -0.8px;
   color: var(--dark-blue);
   margin: 0;
 }
 
 h6 {
   font-size: 16px;
-  line-height: 24px;
-  font-family: apertura, sans-serif;
+  line-height: 150%;
+  font-family: 'Apertura, Regular';
+  font-family: 'Apertura, Regular';
+  font-weight: 400;
   font-style: normal;
-  font-weight: 500;
   margin: 0;
+}
+
+p {
+  font-family: 'Apertura, Regular';
 }
 
 p.subtext {
   font-size: 16px;
   line-height: 20px;
-  font-family: apertura, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Apertura, Regular';
   color: var(--white);
 }
 
 p.allCaps {
   font-size: 14px;
   line-height: 20px;
-  font-family: apertura, sans-serif;
-  font-style: normal;
-  font-weight: 700;
+  font-family: 'Apertura, Regular';
+  font-weight: 450;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
   color: var(--white);
 }
 
@@ -110,9 +181,10 @@ a {
 button {
   font-size: 15px;
   line-height: 20px;
-  font-family: apertura, sans-serif;
-  font-style: normal;
-  font-weight: 700;
+  font-family: 'Apertura, Regular';
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  font-weight: 450;
   border-radius: 2px;
   border: solid 1px;
   padding-left: 16px;
@@ -324,7 +396,7 @@ p {
 .rating-section-container p {
   font-size: 40px;
   line-height: 48px;
-  font-family: petersburg-web, serif;
+  font-family: 'Petersburg, Regular';
   font-style: normal;
   font-weight: 400;
 }
@@ -384,11 +456,11 @@ p {
 }
 
 .read-more {
-  font-family: apertura, sans-serif;
+  font-family: 'Apertura, Regular';
   font-size: 15px;
   font-style: normal;
   font-weight: 450;
-  line-height: 16px;
+  line-height: 106.667%;
   letter-spacing: 0.75px;
   text-transform: uppercase;
   color: var(--brand-color);
@@ -442,7 +514,6 @@ p {
 
 p.footer-header {
   color: var(--light-grey);
-  font-family: apertura, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 450;
@@ -460,7 +531,6 @@ p.footer-header {
 
 .footer-bottom p {
   color: var( --light-grey);
-  font-family: apertura, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
