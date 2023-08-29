@@ -1,9 +1,9 @@
 import ReactPlayer from "react-player";
 
 function Hero({ data }) {
-  const tagLine = data.homePage.nodes[0].tagLine;
-  const heroVideo = data.homePage.nodes[0].heroVideoURL;
-  const heroVideoPoster = data.homePage.nodes[0].heroVideoPoster.mediaItemUrl;
+  const tagLine = data.nodes[0].tagLine;
+  const heroVideo = data.nodes[0].heroVideoURL;
+  const heroVideoPoster = data.nodes[0].heroVideoPoster.mediaItemUrl;
   return (
     <div className="hero-container" style={{ zIndex: 1, position: "relative" }}>
       {/* TO DO: hide text once video starts play */}

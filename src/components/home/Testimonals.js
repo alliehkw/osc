@@ -3,15 +3,14 @@ import TestimonialsRotator from "./TestimonialsRotator";
 import BackArrow from "../svgs/BackArrow.js";
 import FrontArrow from "../svgs/FrontArrow.js";
 
-function Testimonials({ data }) {
-  const header = data.homePage.nodes[0].testimonialsSectionHeader;
-  const reviewButtonTitle = data.homePage.nodes[0].reviewButtonTitle;
-  const reviewButtonExplanation =
-    data.homePage.nodes[0].reviewButtonExplanation;
-  const testimonials = data.testimonials.nodes;
-
+function Testimonials({
+  testimonials_data,
+  header,
+  reviewButtonTitle,
+  reviewButtonExplanation,
+}) {
   function handleForwardClick(currentIndex, setCurrentIndex) {
-    const nextIndex = (currentIndex + 1) % testimonials.length;
+    const nextIndex = (currentIndex + 1) % testimonials_data.length;
     setCurrentIndex(nextIndex);
     clearInterval(intervalRef.current);
     startInterval(nextIndex);
@@ -19,7 +18,7 @@ function Testimonials({ data }) {
 
   function handleBackwardClick(currentIndex, setCurrentIndex) {
     const prevIndex =
-      (currentIndex - 1 + testimonials.length) % testimonials.length;
+      (currentIndex - 1 + testimonials_data.length) % testimonials_data.length;
     setCurrentIndex(prevIndex);
     clearInterval(intervalRef.current);
     startInterval(prevIndex);
@@ -30,7 +29,9 @@ function Testimonials({ data }) {
 
   const startInterval = (index) => {
     intervalRef.current = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+      setCurrentIndex(
+        (prevIndex) => (prevIndex + 1) % testimonials_data.length
+      );
     }, 15000);
   };
 
@@ -56,7 +57,7 @@ function Testimonials({ data }) {
       <div className="testimonials-container-right">
         <div className="testimonial-block">
           <TestimonialsRotator
-            testimonials={testimonials}
+            testimonials={testimonials_data}
             currentIndex={currentIndex}
           />
         </div>

@@ -1,8 +1,5 @@
-function LatestNews({ data }) {
-  const latestNewsTitle = data.homePage.nodes[0].latestNewsTitle;
-  const newsStories = data.newsStories.nodes;
-
-  const newsStoriesBlock = newsStories.map((story, index) => {
+function LatestNews({ newsStories_data, header }) {
+  const newsStoriesBlock = newsStories_data.map((story, index) => {
     return (
       <div className="card-block" key={index}>
         <div className="card-image">
@@ -20,7 +17,7 @@ function LatestNews({ data }) {
   });
   return (
     <div className="cards-container">
-      <h2>{latestNewsTitle}</h2>
+      <h2>{header}</h2>
       <div className="cards-block">{newsStoriesBlock}</div>
     </div>
   );

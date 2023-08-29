@@ -1,9 +1,5 @@
-function Accolades({ data }) {
-  const accoladesTitle = data.homePage.nodes[0].accoladesTitle;
-  const accolades = data.accolades.nodes;
-
-  const accoladeBlock = accolades.map((accolade, index) => {
-    console.log(accolade);
+function Accolades({ accolades_data, header }) {
+  const accoladeBlock = accolades_data.map((accolade, index) => {
     return (
       <div className="accolade-block" key={index}>
         <div
@@ -38,7 +34,7 @@ function Accolades({ data }) {
 
   return (
     <div className="accolades-container">
-      <h2>{accoladesTitle}</h2>
+      <h2>{header}</h2>
       <div className="accolades">{accoladeBlock}</div>
     </div>
   );

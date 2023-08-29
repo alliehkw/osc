@@ -1,8 +1,7 @@
-function ReasonsSection({ data }) {
-  const header = data.homePage.nodes[0].reasonsSectionHeader;
+function ReasonsSection({ header, reasons_data }) {
   // TO DO: get the ratings in the right order once I can talk to Atlas customer service
   let counter = 0;
-  const reasonsBlock = data.reasons.nodes.map((reason, index) => {
+  const reasonsBlock = reasons_data.map((reason, index) => {
     counter++;
     return (
       <div className="card-block" key={index}>

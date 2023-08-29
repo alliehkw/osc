@@ -451,18 +451,17 @@ p {
   margin-right: 0.75em;
   overflow: hidden;
   max-width: 24em;
-  position: relative;
-  z-index: 1;
 }
 
 .card-image {
-  height: 17.5em;
+  height: auto;
   width: 24em;
   margin-bottom: 1.5em;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .card-image img {
@@ -668,16 +667,37 @@ button.front-arrow {
   display: block;
 }
 
+/* SUBSCRIBE */
+
+.subscribe-container {
+  background-color: var(--dark-green);
+}
+
+.subscribe-container h2 {
+  color: white;
+  text-align: left;
+  max-width: 12em;
+}
+
 /* FOOTER */
 
 .footer-container {
-  background-color: var(--dark-green);
   display: flex;
-  flex-direction: column;
+  background-color: var(--dark-green);
+  align-items: center;
+  justify-content: center;
   padding-left: 7.5em;
   padding-right: 7.5em;
   padding-bottom: 5.5em;
   padding-top: 6em;
+  
+}
+
+.footer-bounding-box {
+  display: flex;
+  flex-direction: column;
+  width: 90em;
+  max-width: 1440px;
 }
 
 .footer-logo {

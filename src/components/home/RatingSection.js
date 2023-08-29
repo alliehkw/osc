@@ -1,8 +1,6 @@
-function RatingSection({ data }) {
-  const header = data.homePage.nodes[0].ratingSectionHeader;
-
+function RatingSection({ ratings_data, header }) {
   // TO DO: get the ratings in the right order once I can talk to Atlas customer service
-  const ratingsBlock = data.ratings.nodes.map((rating, index) => {
+  const ratingsBlock = ratings_data.map((rating, index) => {
     return (
       <div className="ratings-block" key={index}>
         <div className="ratings-circle">

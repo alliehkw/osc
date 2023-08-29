@@ -1,19 +1,19 @@
 import NEArrow from "../svgs/NEArrow.js";
 
 function AboutSection({ data }) {
-  const aboutSectionTop = data.homePage.nodes[0].aboutSectionTop;
-  const aboutSectionBottom = data.homePage.nodes[0].aboutSectionBottom;
+  const aboutSectionTop = data.nodes[0].aboutSectionTop;
+  const aboutSectionBottom = data.nodes[0].aboutSectionBottom;
   const aboutSectionImageHip = {
-    url: data.homePage.nodes[0].aboutSectionImageHip.mediaItemUrl,
-    alt: data.homePage.nodes[0].aboutSectionImageHip.altText,
+    url: data.nodes[0].aboutSectionImageHip.mediaItemUrl,
+    alt: data.nodes[0].aboutSectionImageHip.altText,
   };
   const aboutSectionImageKnee = {
-    url: data.homePage.nodes[0].aboutSectionImageKnee.mediaItemUrl,
-    alt: data.homePage.nodes[0].aboutSectionImageKnee.altText,
+    url: data.nodes[0].aboutSectionImageKnee.mediaItemUrl,
+    alt: data.nodes[0].aboutSectionImageKnee.altText,
   };
   const aboutSectionImageShoulder = {
-    url: data.homePage.nodes[0].aboutSectionImageShoulder.mediaItemUrl,
-    alt: data.homePage.nodes[0].aboutSectionImageShoulder.altText,
+    url: data.nodes[0].aboutSectionImageShoulder.mediaItemUrl,
+    alt: data.nodes[0].aboutSectionImageShoulder.altText,
   };
 
   return (

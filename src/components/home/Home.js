@@ -5,104 +5,38 @@ import ReasonsSection from "./ReasonsSection.js";
 import Testimonials from "./Testimonals.js";
 import Accolades from "./Accolades.js";
 import LatestNews from "./LatestNews.js";
-import { useQuery, gql } from "@apollo/client";
 
-const home_data = gql`
-  {
-    homePage {
-      nodes {
-        tagLine
-        heroVideoURL
-        heroVideoPoster {
-          mediaItemUrl
-        }
-        aboutSectionBottom
-        aboutSectionTop
-        aboutSectionImageHip {
-          mediaItemUrl
-          altText
-        }
-        aboutSectionImageKnee {
-          mediaItemUrl
-          altText
-        }
-        aboutSectionImageShoulder {
-          mediaItemUrl
-          altText
-        }
-        ratingSectionHeader
-        reasonsSectionHeader
-        testimonialsSectionHeader
-        reviewButtonExplanation
-        reviewButtonTitle
-        accoladesTitle
-        latestNewsTitle
-      }
-    }
-    ratings {
-      nodes {
-        statistic
-        statisticExplaination
-      }
-    }
-    reasons {
-      nodes {
-        reasonTitle
-        reasonExplaination
-        reasonImage {
-          mediaItemUrl
-          altText
-        }
-      }
-    }
-    testimonials {
-      nodes {
-        name
-        reviewDate
-        review
-        stars
-      }
-    }
-    accolades {
-      nodes {
-        stars
-        brandLogo {
-          altText
-          mediaItemUrl
-        }
-        brandName {
-          altText
-          mediaItemUrl
-        }
-      }
-    }
-    newsStories {
-      nodes {
-        newsTitle
-        newsDescription
-        newsImage {
-          altText
-          mediaItemUrl
-        }
-      }
-    }
-  }
-`;
-
-function Home() {
-  const { loading, error, data } = useQuery(home_data);
-
+function Home({ data, loading }) {
   return (
     <>
       {!loading ? (
         <div className="home-container">
-          <Hero data={data} />
-          <AboutSection data={data} />
-          <RatingSection data={data} />
-          <ReasonsSection data={data} />
-          <Testimonials data={data} />
-          <Accolades data={data} />
-          <LatestNews data={data} />
+          <Hero data={data.homePage} />
+          <AboutSection data={data.homePage} />
+          <RatingSection
+            ratings_data={data.ratings.nodes}
+            header={data.homePage.nodes[0].ratingSectionHeader}
+          />
+          <ReasonsSection
+            reasons_data={data.reasons.nodes}
+            header={data.homePage.nodes[0].reasonsSectionHeader}
+          />
+          <Testimonials
+            testimonials_data={data.testimonials.nodes}
+            header={data.homePage.nodes[0].testimonialsSectionHeader}
+            reviewButtonTitle={data.homePage.nodes[0].reviewButtonTitle}
+            reviewButtonExplanation={
+              data.homePage.nodes[0].reviewButtonExplanation
+            }
+          />
+          <Accolades
+            accolades_data={data.accolades.nodes}
+            header={data.homePage.nodes[0].accoladesTitle}
+          />
+          <LatestNews
+            newsStories_data={data.newsStories.nodes}
+            header={data.homePage.nodes[0].latestNewsTitle}
+          />
         </div>
       ) : null}
     </>
