@@ -7,24 +7,24 @@ function FrontArrow() {
       viewBox="0 0 24 24"
       fill="none"
     >
-      <g clip-path="url(#clip0_104_1253)">
+      <g clipPath="url(#clip0_104_1253)">
         <path
           d="M5 12H19"
           stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M13 18L19 12"
           stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M13 6L19 12"
           stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>

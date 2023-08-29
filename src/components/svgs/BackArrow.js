@@ -7,24 +7,24 @@ function BackArrow() {
       viewBox="0 0 24 24"
       fill="none"
     >
-      <g clip-path="url(#clip0_104_1246)">
+      <g clipPath="url(#clip0_104_1246)">
         <path
           d="M5 12H19"
           stroke="#112E3D"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M5 12L11 18"
           stroke="#112E3D"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M5 12L11 6"
           stroke="#112E3D"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>

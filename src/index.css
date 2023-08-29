@@ -11,7 +11,8 @@
   --medium-grey: #586C75;
   --black: #000;
   --star-size: 1.5em;
-  --star-background: #FCBD06;
+  --star-color: #FCBD06;
+  --star-background: #C4DAE3;
 }
 
 /* TYPEOGRAPHY  */
@@ -218,6 +219,21 @@ button.transparent {
 
 p {
   margin: 0;
+}
+
+.stars {
+  --percent: calc(var(--stars)/5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-color) var(--percent), var(--star-background) var(--percent));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 /* NAVBAR */
@@ -535,27 +551,12 @@ p {
   opacity: 0;
 }
 
-.stars {
-  --percent: calc(var(--stars)/5 * 100%);
-  display: inline-block;
-  font-size: var(--star-size);
-  font-family: Times;
-  line-height: 1;
-  &::before {
-    content: '★★★★★';
-    letter-spacing: 3px;
-    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--light-grey) var(--percent));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  margin-bottom: 1.5em;
-}
-
 #testimonial p.review {
   color: var(--dark-blue);
   margin-bottom: 1.5em;
   max-height: 15em;
   overflow: auto;
+  margin-top: 1.5em;
 }
 
 #testimonial p.reviewName {
@@ -592,6 +593,63 @@ button.front-arrow {
   width: 3.5em;
   height: 3.5em;
 }
+
+/* ACCOLADES */
+
+.accolades-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.accolades {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 75em;
+  flex-wrap: wrap;
+  margin-top: 2.5em;
+}
+
+.accolade-block {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5em;
+  height: 6.25em;
+  overflow: hidden;
+  max-width: 50%;
+}
+
+.stars #accolade-stars {
+  margin-bottom: 0;
+}
+
+.brand-images {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.brand-images-gap {
+  width: 0.75em;
+}
+
+.brand-name img, .brand-logo img {
+  /* object-fit: contain; */
+  max-height: 3.375em;
+  /* width: 100%; */
+  display: block;
+}
+
+
 /* FOOTER */
 
 .footer-container {

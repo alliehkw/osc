@@ -35,6 +35,7 @@ const home_data = gql`
         testimonialsSectionHeader
         reviewButtonExplanation
         reviewButtonTitle
+        accoladesTitle
       }
     }
     ratings {
@@ -61,6 +62,19 @@ const home_data = gql`
         stars
       }
     }
+    accolades {
+      nodes {
+        stars
+        brandLogo {
+          altText
+          mediaItemUrl
+        }
+        brandName {
+          altText
+          mediaItemUrl
+        }
+      }
+    }
   }
 `;
 
@@ -76,7 +90,7 @@ function Home() {
           <RatingSection data={data} />
           <ReasonsSection data={data} />
           <Testimonials data={data} />
-          <Accolades />
+          <Accolades data={data} />
           <LatestNews />
         </div>
       ) : null}

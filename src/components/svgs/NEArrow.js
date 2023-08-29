@@ -18,8 +18,8 @@ function NEArrow() {
         <path
           d="M8.5 7H17.5V16"
           stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
