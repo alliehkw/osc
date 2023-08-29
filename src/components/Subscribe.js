@@ -15,6 +15,7 @@ function Subscribe({ subscribe_data, header }) {
     <div className="subscribe-container">
       <div className="subscribe-bounding-box">
         <h2>{header}</h2>
+        {/* TO DO: MAKE THIS AN ACTIVE FORM AND SAVE THE INPUTS FROM THE USER! */}
         <form className="subscribe-form">{subscribeBlock}</form>
         <div className="subscribe-button-container">
           <button className="green">subscribe</button>
