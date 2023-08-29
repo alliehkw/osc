@@ -7,6 +7,7 @@ import Home from "./components/home/Home.js";
 import PatientEducation from "./components/patient-education/PatientEducation";
 import OnsiteTherapy from "./components/onsite-therapy/OnsiteTherapy.js";
 import { useQuery, gql } from "@apollo/client";
+import React, { useEffect } from "react";
 
 const app_data = gql`
   {
@@ -100,6 +101,12 @@ const app_data = gql`
         oSCPhoneNumber2
       }
     }
+    subscribeFields {
+      nodes {
+        fieldInput
+        placeHolderText
+      }
+    }
   }
 `;
 
@@ -123,7 +130,10 @@ function App() {
               <Route path="/onsite-therapy" element={<OnsiteTherapy />} />{" "}
             </Routes>{" "}
           </Router>
-          <Subscribe header={data.homePage.nodes[0].subscribeHeader} />
+          <Subscribe
+            header={data.homePage.nodes[0].subscribeHeader}
+            subscribe_data={data.subscribeFields.nodes}
+          />
           <Footer footer_data={data.allFooter.nodes[0]} />
         </div>
       ) : null}
