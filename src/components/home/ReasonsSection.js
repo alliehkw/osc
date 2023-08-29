@@ -5,8 +5,8 @@ function ReasonsSection({ data }) {
   const reasonsBlock = data.reasons.nodes.map((reason, index) => {
     counter++;
     return (
-      <div className="reason-block" key={index}>
-        <div className="reasons-image">
+      <div className="card-block" key={index}>
+        <div className="card-image">
           <img
             src={reason.reasonImage.mediaItemUrl}
             alt={reason.reasonImage.altText}
@@ -24,9 +24,9 @@ function ReasonsSection({ data }) {
   });
 
   return (
-    <div className="reasons-section-container">
+    <div className="cards-container">
       <h2>{header}</h2>
-      <div className="reasons-block">{reasonsBlock}</div>
+      <div className="cards-block">{reasonsBlock}</div>
     </div>
   );
 }

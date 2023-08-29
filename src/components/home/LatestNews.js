@@ -4,8 +4,8 @@ function LatestNews({ data }) {
 
   const newsStoriesBlock = newsStories.map((story, index) => {
     return (
-      <div className="story-block" key={index}>
-        <div className="story-image">
+      <div className="card-block" key={index}>
+        <div className="card-image">
           <img
             src={story.newsImage.mediaItemUrl}
             alt={story.newsImage.altText}
@@ -19,9 +19,9 @@ function LatestNews({ data }) {
     );
   });
   return (
-    <div className="latest-news-container">
+    <div className="cards-container">
       <h2>{latestNewsTitle}</h2>
-      <div className="stories-block">{newsStoriesBlock}</div>
+      <div className="cards-block">{newsStoriesBlock}</div>
     </div>
   );
 }
