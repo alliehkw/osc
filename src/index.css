@@ -102,7 +102,7 @@ code {
 }
 
 .App {
-  background-color: var(--brand-color);
+  background-color: var(--white);
 }
 
 /* QUESTION: the typography doc says h1 should be 64/68 but in the mock up it says its 70 --> which is correct?  */
@@ -425,27 +425,27 @@ p {
   font-weight: 400;
 }
 
-/* REASONS SECTION */
+/* REASONS SECTION && LATEST NEWS SECTION*/
 
-.reasons-section-container {
-  background-color: var(--white);
+.reasons-section-container .latest-news-container {
   padding-top: 6em;
   padding-bottom: 6.5em;
 }
 
-.reasons-section-container h2 {
+.reasons-section-container h2, .latest-news-container h2 {
   padding-bottom: 1.5em;
+  padding-top: 2em;
   width: 10em;
   margin: auto;
 }
 
-.reasons-block {
+.reasons-block, .stories-block {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.reason-block {
+.reason-block, .story-block {
   display: flex;
   flex-direction: column;
   margin-left: 0.75em;
@@ -456,10 +456,21 @@ p {
   z-index: 1;
 }
 
-.reasons-image img {
+.reasons-image, .story-image {
   height: 17.5em;
-  width: auto;
+  width: 24em;
   margin-bottom: 1.5em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reasons-image img, .story-image img {
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  max-height: 100%; 
 }
 
 .reasons-number {
@@ -477,6 +488,11 @@ p {
 }
 
 .reasons-block h5, h6 {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.stories-block h5, h6{
   text-align: left;
   margin-bottom: 1em;
 }
@@ -657,7 +673,6 @@ button.front-arrow {
   /* width: 100%; */
   display: block;
 }
-
 
 /* FOOTER */
 

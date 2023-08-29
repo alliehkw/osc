@@ -36,6 +36,7 @@ const home_data = gql`
         reviewButtonExplanation
         reviewButtonTitle
         accoladesTitle
+        latestNewsTitle
       }
     }
     ratings {
@@ -75,6 +76,16 @@ const home_data = gql`
         }
       }
     }
+    newsStories {
+      nodes {
+        newsTitle
+        newsDescription
+        newsImage {
+          altText
+          mediaItemUrl
+        }
+      }
+    }
   }
 `;
 
@@ -91,7 +102,7 @@ function Home() {
           <ReasonsSection data={data} />
           <Testimonials data={data} />
           <Accolades data={data} />
-          <LatestNews />
+          <LatestNews data={data} />
         </div>
       ) : null}
     </>
