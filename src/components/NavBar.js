@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 import DownCarrot from "./svgs/DownCarrot.js";
+import WhiteLogo from "./svgs/WhiteLogo.svg";
+import DarkLogo from "./svgs/DarkLogo.svg";
 
 const nav_bar_data = gql`
   {
@@ -49,21 +51,18 @@ function NavBar() {
               <Link to="/" end>
                 {!navbar ? (
                   <div className="logo-container">
-                    <img
-                      src={`${data.allNavBar.nodes[0].oSCLogo.mediaItemUrl}`}
-                      alt={`${data.allNavBar.nodes[0].oSCLogo.altText}`}
-                    />
+                    <img src={WhiteLogo} alt="OSC Logo" />
                   </div>
                 ) : (
                   <div className="logo-container active">
-                    <img
-                      src={`${data.allNavBar.nodes[0].oSCLogo2.mediaItemUrl}`}
-                      alt={`${data.allNavBar.nodes[0].oSCLogo2.altText}`}
-                    />
+                    <div className="logo-container">
+                      <img src={DarkLogo} alt="OSC Logo" />
+                    </div>
                   </div>
                 )}
               </Link>
             </li>
+            <div className="logo-gap"></div>
             {/* TO DO: make this lead somewhere */}
             <li>
               {/* <Link to="/about"> */}

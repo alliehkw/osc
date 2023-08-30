@@ -280,22 +280,24 @@ p {
 .logo-container {
   display: flex;
   align-items: center;
-  margin-right: 1.875em;
-  height: auto;
-  width: 82px;
   overflow: hidden;
   position: relative;
 }
 
 .logo-container.active {
   transition: opacity 0.5s ease-in-out;
+  width: 82px;
 }
 
 .logo-container img {
   display: block;
   flex-shrink: 0;
-  width: 100%;
-  max-height: 100%; 
+  width: 82px;
+  height: auto;
+}
+
+.logo-gap {
+  width: 1.875em;
 }
 
 .navbar-container li {

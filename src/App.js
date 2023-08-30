@@ -7,7 +7,6 @@ import Home from "./components/home/Home.js";
 import PatientEducation from "./components/patient-education/PatientEducation";
 import OnsiteTherapy from "./components/onsite-therapy/OnsiteTherapy.js";
 import { useQuery, gql } from "@apollo/client";
-import React, { useEffect } from "react";
 
 const app_data = gql`
   {
