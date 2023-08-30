@@ -178,11 +178,12 @@ p.allCaps {
   font-weight: 450;
   text-transform: uppercase;
   letter-spacing: 0.0875em;
-  color: var(--white);
+  /* color: var(--white); */
 }
 
 a {
   text-decoration: none;
+  color: var(--body-text);
 }
 
 button {
@@ -248,7 +249,27 @@ p {
   overflow: hidden;
   z-index: 3;
   width: 100vw; 
-  margin-top: 1.25em;
+  height: 4.5em;
+  position: fixed;
+  background-color: transparent;
+  color: var(--white);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.navbar-container a {
+  color: var(--white);
+  transition: color 0.5s ease-in-out;
+}
+
+.navbar-container.active {
+  background-color: var(--white);
+  color: var(--brand-color);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.navbar-container.active a {
+  color: var(--brand-color);
+  transition: color 0.5s ease-in-out;
 }
 
 .navbar-split {
@@ -260,6 +281,21 @@ p {
   display: flex;
   align-items: center;
   margin-right: 1.875em;
+  height: auto;
+  width: 82px;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-container.active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.logo-container img {
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  max-height: 100%; 
 }
 
 .navbar-container li {
@@ -673,7 +709,6 @@ button.front-arrow {
 /* .subscribe-container {
   background-color: var(--dark-green);
 } */
-
 
 
 /* FOOTER */

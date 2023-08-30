@@ -1,8 +1,8 @@
 function Subscribe({ subscribe_data, header }) {
   const subscribeBlock = subscribe_data.map((field, index) => {
     return (
-      <div className="subscribe-field">
-        <label key={index}>{field.fieldInput}</label>
+      <div className="subscribe-field" key={index}>
+        <label>{field.fieldInput}</label>
         <input
           type="text"
           name={field.fieldInput}
