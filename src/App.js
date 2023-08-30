@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar.js";
 import Footer from "./components/Footer.js";
 import Subscribe from "./components/Subscribe.js";
 import Home from "./components/home/Home.js";
+import Doctors from "./components/doctors/Doctors.js";
 import PatientEducation from "./components/patient-education/PatientEducation";
 import OnsiteTherapy from "./components/onsite-therapy/OnsiteTherapy.js";
 import { useQuery, gql } from "@apollo/client";
@@ -106,6 +107,22 @@ const app_data = gql`
         placeHolderText
       }
     }
+    allDoctorsPage {
+      nodes {
+        doctorsPageAboutSection
+        doctorsPageTagLine
+      }
+    }
+    doctors {
+      nodes {
+        doctorsName
+        doctorsPicture {
+          altText
+          mediaItemUrl
+        }
+        doctorsSpecialty
+      }
+    }
   }
 `;
 
@@ -125,6 +142,7 @@ function App() {
                 path="/"
                 element={<Home data={data} loading={loading} />}
               />
+              <Route path="/doctors" element={<Doctors data={data} />} />
               <Route path="/education" element={<PatientEducation />} />
               <Route path="/onsite-therapy" element={<OnsiteTherapy />} />{" "}
             </Routes>{" "}

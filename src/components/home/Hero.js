@@ -19,7 +19,7 @@ function Hero({ data }) {
           zIndex: "2",
         }}
       >
-        <h1 style={{ width: 996 }}>{tagLine}</h1>
+        <h1 style={{ width: 900 }}>{tagLine}</h1>
       </div>
       <div style={{ zIndex: 1, position: "relative" }}>
         <ReactPlayer

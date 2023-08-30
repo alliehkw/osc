@@ -106,14 +106,14 @@ code {
   background-color: var(--white);
 }
 
-/* QUESTION: the typography doc says h1 should be 64/68 but in the mock up it says its 70 --> which is correct?  */
 h1 {
-  font-size: 4.375em;
+  font-size: 4em;
   line-height: 106.25%;
   font-family: 'Petersburg, Regular';
   font-weight: 400;
   font-style: normal;
   color: var(--white);
+  margin: 0;
 }
 
 h2 {
@@ -135,7 +135,8 @@ h3 {
 h4 {
   font-size: 1.625em;
   line-height: 120%;
-  font-family: 'Apertura, Medium';
+  font-weight: 450;
+  font-family: 'Apertura, Regular';
   margin: 0;
 }
 
@@ -263,12 +264,12 @@ p {
 
 .navbar-container.active {
   background-color: var(--white);
-  color: var(--brand-color);
+  color: var(--dark-blue);
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .navbar-container.active a {
-  color: var(--brand-color);
+  color: var(--dark-blue);
   transition: color 0.5s ease-in-out;
 }
 
@@ -440,9 +441,11 @@ p {
 }
 
 .ratings-block {
-  margin-left: 2em;
-  margin-right: 2em;
   padding: 2.5em;
+}
+
+.ratings-block + .ratings-block {
+  margin-left: 4em;
 }
 
 .ratings-circle {
@@ -706,14 +709,83 @@ button.front-arrow {
   display: block;
 }
 
+/* DOCTORS */
+
+.doctors-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctors-hero {
+  height: 29.5em;
+  background-color: var(--brand-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  width: 100%;
+}
+
+.doctors-hero p {
+  margin-bottom: 1em;
+}
+
+.doctors-page-about-section-container {
+  display: flex;
+  justify-content: space-evenly;
+  /* padding-left: 7.5em;
+  padding-right: 7.5em; */
+  padding-top: 4.8em;
+  padding-bottom: 4.8em;
+  max-width: 75em;
+}
+
+.doctor-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctor-summary + .doctor-summary {
+  margin-left: 5em;
+}
+
+.doctors-page-about-section-text {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25em;
+  max-width: 486px;
+  margin-right: 4.3125em;
+}
+
+.doctors-page-about-section-doctors {
+  display: flex;
+}
+
+.doctor-summary-image {
+  width: 17.643375em;
+  height: 17.643375em;
+  margin-bottom: 1.25em;
+}
+
+h6.specialty {
+  font-weight: 450;
+}
+
+h4.doctors-name {
+  color: var(--brand-color);
+}
+
+button.view-profile {
+  background-color: var(--white);
+  border: 0;
+  color: var(--brand-color);
+  margin-top: 0.25em;
+}
 /* SUBSCRIBE && FOOTER */
-
-/* .subscribe-container {
-  background-color: var(--dark-green);
-} */
-
-
-/* FOOTER */
 
 .subscribe-container {
   display: flex;

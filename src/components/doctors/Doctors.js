@@ -1,7 +1,14 @@
-function Doctors() {
+import Hero from "./Hero.js";
+import AboutSection from "./AboutSection";
+
+function Doctors({ data }) {
   return (
     <div className="doctors-container">
-      <p>Doctors</p>
+      <Hero hero_data={data.allDoctorsPage.nodes[0]} />
+      <AboutSection
+        hero_data={data.allDoctorsPage.nodes[0]}
+        doctors_data={data.doctors.nodes}
+      />
     </div>
   );
 }
