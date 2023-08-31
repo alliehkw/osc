@@ -779,12 +779,90 @@ h4.doctors-name {
   color: var(--brand-color);
 }
 
-button.view-profile {
+button.unbound-button {
   background-color: var(--white);
   border: 0;
   color: var(--brand-color);
   margin-top: 0.25em;
 }
+
+.doctor-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 75em;
+}
+
+.doctor-modal-container {
+  display: flex;
+  padding: 4.5em;
+  padding-top: 6em;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+}
+
+.doctor-modal-left {
+  width: auto;
+}
+
+.doctor-modal-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75em;
+}
+
+.doctor-modal-buttons button.unbound-button {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.doctor-modal-buttons + .doctor-modal-buttons {
+  margin-top: 0.8em;
+}
+
+.doctor-modal-right {
+  width: 38em;
+  margin-left: 5em;
+}
+
+.doctor-modal-right h3 {
+  margin-top: 0;
+  margin-bottom:  0.667em;
+}
+
+.medical-ed-images {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.medical-ed-images img {
+  width: 12.5em;
+}
+
+.doctor-modal-left .doctor-summary-image {
+  width: 12.5em;
+  height: 12.5em;
+}
+
+.doctor-modal-left .doctor-summary-image img {
+  height: 12.5em;
+  width: auto;
+}
+
+.exit-button {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  top: 1.5em;
+  right: 2.5em;
+}
+
 /* SUBSCRIBE && FOOTER */
 
 .subscribe-container {

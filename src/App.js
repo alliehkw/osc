@@ -121,6 +121,19 @@ const app_data = gql`
           mediaItemUrl
         }
         doctorsSpecialty
+        profileSummary
+        fellowshipProgramImage {
+          altText
+          mediaItemUrl
+        }
+        medicalSchoolImage {
+          altText
+          mediaItemUrl
+        }
+        residencyProgramImage {
+          altText
+          mediaItemUrl
+        }
       }
     }
   }
