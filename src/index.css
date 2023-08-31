@@ -10,6 +10,7 @@
   --light-grey: #8AA0AA;
   --light-blue: #EFF7FB;
   --medium-grey: #586C75;
+  --medium-dark-grey: #28404B;
   --black: #000;
   --star-size: 1.5em;
   --star-color: #FCBD06;
@@ -179,7 +180,6 @@ p.allCaps {
   font-weight: 450;
   text-transform: uppercase;
   letter-spacing: 0.0875em;
-  /* color: var(--white); */
 }
 
 a {
@@ -863,6 +863,82 @@ button.unbound-button {
   right: 2.5em;
 }
 
+.certifications-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+  background-color: var(--light-blue);
+}
+
+.certifications-page-container h2 {
+  margin-bottom: 1.75em;
+  width: 18.625em;
+}
+
+.certifications-content {
+  display: flex;
+}
+
+.certifications-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-width: 40%;
+}
+
+.certifications-right {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 7.5em;
+}
+
+.certifications-page-container h5 {
+  color: var(--medium-dark-grey);
+  font-weight: 400;
+  margin-top: 1.4em;
+}
+
+.boards-cert-image {
+  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-top: 4.5em;
+}
+
+.PA-container {
+  padding-top: 6em;
+  padding-bottom: 7.375em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+
+.PA-container h2 {
+  width: 11.5em;
+  margin-bottom: 2em;
+}
+
+.PA-container h4 {
+  margin-bottom: 1em;
+}
+
+.PA-content {
+  text-align: left;
+  margin-left: 7.5em;
+}
+
+.PA-info {
+  display: flex;
+  justify-content: space-between;
+}
 /* SUBSCRIBE && FOOTER */
 
 .subscribe-container {

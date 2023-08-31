@@ -136,6 +136,30 @@ const app_data = gql`
         }
       }
     }
+    allCertificationsPage {
+      nodes {
+        boardCertificationImage {
+          altText
+          mediaItemUrl
+        }
+        certificationsPageContentLeft
+        certificationsPageContentRight
+        certificationsPageTagline
+        certificationsPageTitleLeft
+        certificationsPageTitleRight
+      }
+    }
+    allPhysicianAssistant {
+      nodes {
+        physiciansAssistantContent
+        physiciansAssistantImage {
+          altText
+          mediaItemUrl
+        }
+        physiciansAssistantName
+        physiciansAssistantPageTageline
+      }
+    }
   }
 `;
 
