@@ -175,6 +175,15 @@ const app_data = gql`
           altText
           mediaItemUrl
         }
+        therapistAbout
+        therapistDescription
+        therapistImage {
+          altText
+          mediaItemUrl
+        }
+        therapistName
+        therapistTagLine
+        therapistTitle
       }
     }
   }

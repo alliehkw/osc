@@ -887,25 +887,26 @@ button.unbound-button {
   justify-content: center;
   padding-top: 6em;
   padding-bottom: 6em;
-  padding-left: 7.5em;
-  padding-right: 7.5em;
+  width: 100%;
   background-color: var(--gray-01);
 }
 
 .certifications-page-container h2 {
   margin-bottom: 1.75em;
-  width: 18.625em;
+  width: 17em;
 }
 
 .certifications-content {
   display: flex;
+  max-width: 1200px;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
 }
 
 .certifications-left {
   display: flex;
   flex-direction: column;
   text-align: left;
-  min-width: 40%;
 }
 
 .certifications-right {
@@ -913,6 +914,7 @@ button.unbound-button {
   flex-direction: column;
   text-align: left;
   margin-left: 7.5em;
+  min-width: 50%;
 }
 
 .certifications-page-container h4 {
@@ -1000,6 +1002,46 @@ button.unbound-button {
 
 .post-op-care-right img {
   overflow: hidden;
+}
+
+.therapist-container {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.therapist-header {
+  width: 40em;
+  margin: auto;
+  margin-bottom: 4.5em;
+}
+
+.therapist-header h2 {
+  margin-bottom: 0.5em;
+}
+
+.therapist {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+  margin: auto;
+  margin-top: 4.5em; 
+}
+
+.therapist-image {
+  width: 17.625em;
+  height: auto;
+}
+
+.therapist-description {
+  text-align: left;
+  margin-left: 7.8757em;
+}
+
+.therapist-description h5 {
+  margin-top: 0.4em;
+  margin-bottom: 1.4em;
 }
 
 /* SUBSCRIBE && FOOTER */
