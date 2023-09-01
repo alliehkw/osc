@@ -1,5 +1,4 @@
 function PhysiciansAssistant({ PA_data }) {
-  console.log(PA_data.physiciansAssistantContent);
   return (
     <div className="PA-container">
       <h2>{PA_data.physiciansAssistantPageTageline}</h2>

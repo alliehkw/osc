@@ -3,12 +3,14 @@ import { Link, Outlet } from "react-router-dom";
 import DownCarrot from "./svgs/DownCarrot.js";
 import WhiteLogo from "./svgs/WhiteLogo.svg";
 import DarkLogo from "./svgs/DarkLogo.svg";
+import { useLocation } from "react-router-dom";
 
 function NavBar() {
   // TO DO: ask steve how he wants the buttons and stuff to transition on scroll
-  // TO DO: make the page scroll up to the top when you navigate between pages
+  // TO DO: make the page scroll up to the to when you navigate between pages
 
   const [navbar, setNavbar] = useState(false);
+  const location = useLocation();
 
   const changeNavbar = () => {
     if (window.scrollY >= 80) {
@@ -18,8 +20,9 @@ function NavBar() {
     }
   };
 
+  // const requestButtonStyles =
   window.addEventListener("scroll", changeNavbar);
-
+  console.log(location.pathname);
   return (
     <>
       <div className={navbar ? "navbar-container active" : "navbar-container"}>
@@ -61,7 +64,7 @@ function NavBar() {
           <li>
             <Link to="/onsite-therapy">
               <div className="navbar-text-with-icon">
-                <p className="allCaps">THERAPY</p>
+                <p className="allCaps">therapy</p>
                 <DownCarrot svgColor={navbar ? "#003028" : "white"} />
               </div>
             </Link>
@@ -70,7 +73,7 @@ function NavBar() {
           <li>
             {/* <Link to="/resources"> */}
             <div className="navbar-text-with-icon">
-              <p className="allCaps">RESOURCES</p>
+              <p className="allCaps">resources</p>
               <DownCarrot svgColor={navbar ? "#003028" : "white"} />
             </div>
             {/* </Link> */}
@@ -92,12 +95,17 @@ function NavBar() {
                 id="navbutton"
                 className={navbar ? "white" : "transparent"}
               >
-                REFER A PATIENT
+                refer a patient
               </button>
             </li>
             <li>
-              <button id="navbutton" className="green">
-                REQUEST AN APPOINTMENT
+              <button
+                id="navbutton"
+                className={
+                  location.pathname === "/" || navbar ? "green" : "white"
+                }
+              >
+                request an appointment
               </button>
             </li>
           </div>
