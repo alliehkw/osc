@@ -11,7 +11,13 @@ function DoctorModal({ showModal, setShowModal, selectedDoctor }) {
         "This is a pop-up modal which gives you more information about the doctors and their background."
       }
       shouldFocusAfterRender={true}
-      style={{ overlay: { backgroundColor: "rgba(0, 0, 0, 0.60)" } }}
+      style={{
+        overlay: {
+          backgroundColor: "rgba(0, 0, 0, 0.60)",
+          zIndex: "1000",
+          overflowY: "auto",
+        },
+      }}
     >
       {selectedDoctor ? (
         <div className="doctor-modal-container">
@@ -36,8 +42,13 @@ function DoctorModal({ showModal, setShowModal, selectedDoctor }) {
           <div className="doctor-modal-right">
             <h3>{selectedDoctor.doctorsName}</h3>
             <div className="doctor-profile-summary">
-              {/* TO DO: add in links to the profile summary and format with the correct paragraph spacing  */}
-              <h5>{selectedDoctor.profileSummary}</h5>
+              {/* TO DO: add in the links for clinical research, etc. once I've finished the rest of the site nav  */}
+              <p
+                className="richText"
+                dangerouslySetInnerHTML={{
+                  __html: selectedDoctor.profileSummary,
+                }}
+              ></p>
             </div>
             <div className="medical-ed-images">
               {/* TO DO: add school, residency, and fellowship images to the doctors modals  */}

@@ -20,9 +20,7 @@ function Certifications({ certification_data }) {
             dangerouslySetInnerHTML={{
               __html: certification_data.certificationsPageContentRight,
             }}
-          >
-            {/* {certification_data.certificationsPageContentRight} */}
-          </h5>
+          ></h5>
         </div>
       </div>
     </div>

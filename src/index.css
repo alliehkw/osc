@@ -93,6 +93,7 @@ body {
   margin: 0;
   font-family: 'Apertura, Regular';
   font-size: 16px;
+  line-height: 150%;
   color: var(--body-text);
 }
 
@@ -158,7 +159,7 @@ h6 {
   margin: 0;
 }
 
-p {
+p.body-text {
   font-family: 'Apertura, Regular';
   font-size: 1.25em;
   line-height: 150%;
@@ -168,7 +169,7 @@ p.subtext {
   font-size: 1em;
   line-height: 125%;
   font-family: 'Apertura, Regular';
-  color: var(--white);
+  /* color: var(--white); */
 }
 
 p.allCaps {
@@ -237,8 +238,8 @@ p {
   }
 }
 
-.richText {
-  font-size: 1em;
+.richText a {
+  color: var(--osc-brand-color);
 }
 
 /* NAVBAR */
@@ -570,7 +571,6 @@ p {
   max-width: 12em;
 }
 
-
 .review-button-container {
   display: flex;
   flex-direction: column;
@@ -753,6 +753,10 @@ button.front-arrow {
   margin-left: 5em;
 }
 
+.doctor-profile-summary {
+  color: var(--gray-05);
+}
+
 .doctors-page-about-section-text {
   text-align: left;
   display: flex;
@@ -806,6 +810,8 @@ button.unbound-button {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--white);
+  overflow: auto;
+  max-height: 60vh;
 }
 
 .doctor-modal-left {
@@ -988,7 +994,7 @@ button.unbound-button {
 
 .subscribe-bounding-box {
   padding-bottom: 5.5em;
-  border-bottom: 1px solid var(--osc-green-07);
+  border-bottom: 1px solid var(--osc-green-06);
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -1058,6 +1064,7 @@ button.unbound-button {
 
 .footer-right p.subtext {
   margin-bottom: 0.625em;
+  color: (var--white);
 }
 
 .footer-right-sub-container {

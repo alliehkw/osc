@@ -18,8 +18,7 @@ const app_data = gql`
         heroVideoPoster {
           mediaItemUrl
         }
-        aboutSectionBottom
-        aboutSectionTop
+        aboutSection
         aboutSectionImageHip {
           mediaItemUrl
           altText

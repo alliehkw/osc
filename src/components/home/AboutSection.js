@@ -1,8 +1,7 @@
 import NEArrow from "../svgs/NEArrow.js";
 
 function AboutSection({ data }) {
-  const aboutSectionTop = data.nodes[0].aboutSectionTop;
-  const aboutSectionBottom = data.nodes[0].aboutSectionBottom;
+  const aboutSection = data.nodes[0].aboutSection;
   const aboutSectionImageHip = {
     url: data.nodes[0].aboutSectionImageHip.mediaItemUrl,
     alt: data.nodes[0].aboutSectionImageHip.altText,
@@ -19,13 +18,16 @@ function AboutSection({ data }) {
   return (
     <div className="about-section-container">
       <div className="about-section-text">
-        {/* TO DO: need to figure out how to add in the hyperlinks to the text */}
-        <p>{aboutSectionTop}</p>
-        <br></br>
-        <p>{aboutSectionBottom}</p>
+        {/* TO DO: add in hyperlinks once I have the rest of the nav stuff set up */}
+        <p
+          className="richText body-text"
+          dangerouslySetInnerHTML={{
+            __html: aboutSection,
+          }}
+        ></p>
         <div className="about-section-buttons">
-          <button className="green">MAKE AN APPOINTMENT</button>
-          <button className="white">LEARN MORE ABOUT OUR SPECIALISTS</button>
+          <button className="green">make an appointment</button>
+          <button className="white">learn more about our specialists</button>
         </div>
       </div>
       <div className="about-section-images">

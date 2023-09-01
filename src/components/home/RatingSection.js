@@ -4,7 +4,7 @@ function RatingSection({ ratings_data, header }) {
     return (
       <div className="ratings-block" key={index}>
         <div className="ratings-circle">
-          <p>{rating.statistic}</p>
+          <p className="body-text">{rating.statistic}</p>
         </div>
         <h5>{rating.statisticExplaination}</h5>
       </div>

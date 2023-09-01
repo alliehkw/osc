@@ -33,7 +33,7 @@ function TestimonialsRotator({ testimonials, currentIndex }) {
         className="stars"
         style={{ "--stars": currentTestimonial.stars }}
       ></div>
-      <p className="review">{currentTestimonial.review}</p>
+      <p className="review body-text">{currentTestimonial.review}</p>
       <p className="reviewName">{currentTestimonial.name}</p>
       <p className="allCaps">{formattedDate}</p>
     </div>
