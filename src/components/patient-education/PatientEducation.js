@@ -1,7 +1,17 @@
-function PatientEducation() {
+import Hero from "../Hero.js";
+import AboutSection from "./AboutSection.js";
+
+function PatientEducation({ data }) {
   return (
     <div className="patient-education-container">
-      <p>PatientEducation</p>
+      <Hero
+        tagline={
+          data.allPatientEducationPage.nodes[0].patientEducationPageTagline
+        }
+        pageTitle={"patient education"}
+        hero_size={"tall"}
+      />
+      <AboutSection about_section_data={data.allPatientEducationPage.nodes[0].patientEducationPageAboutSection}/>
     </div>
   );
 }

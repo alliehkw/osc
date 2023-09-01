@@ -1,5 +1,6 @@
 :root {
   --osc-brand-color: #008771;
+  --osc-green-01: #DDF9F4;
   --osc-green-06: #015143;
   --osc-green-07: #003028;
   --body-text: #1C3A49;
@@ -342,9 +343,32 @@ p {
 
 /* HERO */
 
-/* .hero-container {
-  height: 51.5em;
-} */
+#hero {
+  background-color: var(--osc-brand-color);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+div#hero.short {
+  height: 29.5em;
+}
+
+div#hero.tall {
+  height: 40.625em;
+}
+
+#hero p {
+  margin-bottom: 1em;
+}
+
+div#hero.tall h1 {
+  width: 10em;
+}
+
 
 /* TO DO: adjust poster and video so that the image always sits on the same spot of the page */
 /* TO DO: get rid of double click to play video */
@@ -360,8 +384,7 @@ p {
 }
 
 .about-section-text {
-  width: 49.5em;
-  margin: auto;
+  padding: 18em;
   padding-top: 5.5em;
   padding-bottom: 6em;
 }
@@ -719,20 +742,6 @@ button.front-arrow {
   align-items: center;
 }
 
-.doctors-hero {
-  height: 29.5em;
-  background-color: var(--osc-brand-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--white);
-  width: 100%;
-}
-
-.doctors-hero p {
-  margin-bottom: 1em;
-}
-
 .doctors-page-about-section-container {
   display: flex;
   justify-content: space-evenly;
@@ -954,6 +963,45 @@ button.unbound-button {
   display: flex;
   justify-content: space-between;
 }
+
+/* PATIENT EDUCATION */
+
+#patient-ed-about-section {
+  background-color: var(--gray-01);
+}
+
+/* ONSITE THERAPY */
+
+.post-op-care-container {
+  background-color: var(--osc-green-01);
+}
+.post-op-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 6em;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.post-op-care-left {
+  width: 27em;
+  text-align: left;
+}
+
+.post-op-care-left h2 {
+  margin-bottom: 0.83em;
+}
+
+.post-op-care-right {
+  height: 45.5em;
+}
+
+.post-op-care-right img {
+  overflow: hidden;
+}
+
 /* SUBSCRIBE && FOOTER */
 
 .subscribe-container {
@@ -1047,6 +1095,7 @@ button.unbound-button {
   margin-top: 1.6875em;
   justify-content: space-between;
   white-space: nowrap;
+  color: var(--white);
 }
 
 .footer-left {

@@ -159,6 +159,24 @@ const app_data = gql`
         physiciansAssistantPageTageline
       }
     }
+    allPatientEducationPage {
+      nodes {
+        patientEducationPageTagline
+        patientEducationPageAboutSection
+      }
+    }
+    allTherapyPage {
+      nodes {
+        therapyPageAboutSection
+        therapyPageTagline
+        postOpCareContent
+        postOpCareHeader
+        postOpCareImage {
+          altText
+          mediaItemUrl
+        }
+      }
+    }
   }
 `;
 
@@ -179,8 +197,14 @@ function App() {
                 element={<Home data={data} loading={loading} />}
               />
               <Route path="/doctors" element={<Doctors data={data} />} />
-              <Route path="/education" element={<PatientEducation />} />
-              <Route path="/onsite-therapy" element={<OnsiteTherapy />} />{" "}
+              <Route
+                path="/education"
+                element={<PatientEducation data={data} />}
+              />
+              <Route
+                path="/onsite-therapy"
+                element={<OnsiteTherapy data={data} />}
+              />
             </Routes>{" "}
           </Router>
           <Subscribe
