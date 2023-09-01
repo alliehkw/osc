@@ -1,4 +1,5 @@
 function PhysiciansAssistant({ PA_data }) {
+  console.log(PA_data.physiciansAssistantContent);
   return (
     <div className="PA-container">
       <h2>{PA_data.physiciansAssistantPageTageline}</h2>
@@ -11,7 +12,12 @@ function PhysiciansAssistant({ PA_data }) {
         </div>
         <div className="PA-content">
           <h4>{PA_data.physiciansAssistantName}</h4>
-          <h5>{PA_data.physiciansAssistantContent}</h5>
+          <h5
+            className="richText"
+            dangerouslySetInnerHTML={{
+              __html: PA_data.physiciansAssistantContent,
+            }}
+          ></h5>
         </div>
       </div>
     </div>

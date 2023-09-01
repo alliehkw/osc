@@ -1,16 +1,14 @@
 :root {
-  --brand-color: #008771;
-  --dark-blue: #112E3D;
-  --dark-green: #003028;
-  --medium-green: #015143;
-  --white: #FFFFFF;
-  --heading-text: #03201B;
+  --osc-brand-color: #008771;
+  --osc-green-06: #015143;
+  --osc-green-07: #003028;
   --body-text: #1C3A49;
-  --secondary-bg: #F0F6F9;
-  --light-grey: #8AA0AA;
-  --light-blue: #EFF7FB;
-  --medium-grey: #586C75;
-  --medium-dark-grey: #28404B;
+  --gray-01: #EFF7FB;
+  --gray-03: #8AA0AA;
+  --gray-04: #586C75;
+  --gray-05: #28404B;
+  --gray-06: #112E3D;
+  --white: #FFFFFF;
   --black: #000;
   --star-size: 1.5em;
   --star-color: #FCBD06;
@@ -123,7 +121,7 @@ h2 {
   font-family: 'Petersburg, Regular';
   font-style: normal;
   font-weight: 400;
-  color: var(--dark-blue);
+  color: var(--gray-06);
   margin: 0;
 }
 
@@ -147,7 +145,7 @@ h5 {
   font-weight: 450;
   font-family: 'Apertura, Regular';
   letter-spacing: -0.05em;
-  color: var(--dark-blue);
+  color: var(--gray-06);
   margin: 0;
 }
 
@@ -203,15 +201,15 @@ button {
 }
 
 button.green {
-  background-color: var(--brand-color);
+  background-color: var(--osc-brand-color);
   color: var(--white);
-  border-color: var(--brand-color);
+  border-color: var(--osc-brand-color);
 }
 
 button.white {
   background-color: var(--white);
-  color: var(--dark-blue);
-  border-color: --dark-blue;
+  color: var(--gray-06);
+  border-color: --gray-06;
 }
 
 button.transparent {
@@ -239,6 +237,10 @@ p {
   }
 }
 
+.richText {
+  font-size: 1em;
+}
+
 /* NAVBAR */
 /* QUESTION: do you want the navbar to be sticky? do you want it to change colors while you scroll? */
 .navbar-container {
@@ -264,12 +266,12 @@ p {
 
 .navbar-container.active {
   background-color: var(--white);
-  color: var(--dark-blue);
+  color: var(--gray-06);
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .navbar-container.active a {
-  color: var(--dark-blue);
+  color: var(--gray-06);
   transition: color 0.5s ease-in-out;
 }
 
@@ -416,7 +418,7 @@ p {
 /* RATING SECTION */
 
 .rating-section-container {
-  background-color: var(--light-blue);
+  background-color: var(--gray-01);
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -449,7 +451,7 @@ p {
 }
 
 .ratings-circle {
-  background-color: var(--brand-color);
+  background-color: var(--osc-brand-color);
   width: 2.625em;
   height: 3em;
   padding: 2.5em;
@@ -514,7 +516,7 @@ p {
 }
 
 .reasons-number {
-  background-color: var(--brand-color);
+  background-color: var(--osc-brand-color);
   height: 3.5em;
   width: 3.5em;
   display: flex;
@@ -540,7 +542,7 @@ p {
   font-weight: 450;
   letter-spacing: 0.046875em;
   text-transform: uppercase;
-  color: var(--brand-color);
+  color: var(--osc-brand-color);
   text-align: left;
 }
 
@@ -587,7 +589,7 @@ p {
 }
 
 .testimonial-block {
-  background-color: var(--light-blue);
+  background-color: var(--gray-01);
   height: 100%;
 }
 
@@ -612,7 +614,7 @@ p {
 }
 
 #testimonial p.review {
-  color: var(--dark-blue);
+  color: var(--gray-06);
   margin-bottom: 1.5em;
   max-height: 15em;
   overflow: auto;
@@ -628,7 +630,7 @@ p {
 }
 
 #testimonial p.allCaps {
-  color: var(--medium-grey);
+  color: var(--gray-04);
 }
 
 .arrows {
@@ -648,8 +650,8 @@ button.back-arrow {
 }
 
 button.front-arrow {
-  background-color: var(--brand-color);
-  border-color: var(--brand-color);
+  background-color: var(--osc-brand-color);
+  border-color: var(--osc-brand-color);
   width: 3.5em;
   height: 3.5em;
 }
@@ -719,7 +721,7 @@ button.front-arrow {
 
 .doctors-hero {
   height: 29.5em;
-  background-color: var(--brand-color);
+  background-color: var(--osc-brand-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -776,13 +778,13 @@ h6.specialty {
 }
 
 h4.doctors-name {
-  color: var(--brand-color);
+  color: var(--osc-brand-color);
 }
 
 button.unbound-button {
   background-color: var(--white);
   border: 0;
-  color: var(--brand-color);
+  color: var(--osc-brand-color);
   margin-top: 0.25em;
 }
 
@@ -872,7 +874,7 @@ button.unbound-button {
   padding-bottom: 6em;
   padding-left: 7.5em;
   padding-right: 7.5em;
-  background-color: var(--light-blue);
+  background-color: var(--gray-01);
 }
 
 .certifications-page-container h2 {
@@ -898,10 +900,13 @@ button.unbound-button {
   margin-left: 7.5em;
 }
 
+.certifications-page-container h4 {
+  margin-bottom: 1em;
+}
+
 .certifications-page-container h5 {
-  color: var(--medium-dark-grey);
+  color: var(--gray-05);
   font-weight: 400;
-  margin-top: 1.4em;
 }
 
 .boards-cert-image {
@@ -935,6 +940,10 @@ button.unbound-button {
   margin-left: 7.5em;
 }
 
+.PA-content p {
+  color: var(--gray-05);
+}
+
 .PA-info {
   display: flex;
   justify-content: space-between;
@@ -943,7 +952,7 @@ button.unbound-button {
 
 .subscribe-container {
   display: flex;
-  background-color: var(--dark-green);
+  background-color: var(--osc-green-07);
   align-items: center;
   padding-left: 7.5em;
   padding-right: 7.5em;
@@ -953,7 +962,7 @@ button.unbound-button {
 
 .footer-container {
   display: flex;
-  background-color: var(--dark-green);
+  background-color: var(--osc-green-07);
   align-items: center;
   padding-left: 7.5em;
   padding-right: 7.5em;
@@ -979,7 +988,7 @@ button.unbound-button {
 
 .subscribe-bounding-box {
   padding-bottom: 5.5em;
-  border-bottom: 1px solid var(--medium-green);
+  border-bottom: 1px solid var(--osc-green-07);
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -1004,13 +1013,13 @@ button.unbound-button {
 }
 
 .subscribe-form label {
-  color: var(--light-blue);
+  color: var(--gray-01);
   margin-bottom: 0.5em;
 }
 
 .subscribe-form input {
-  background-color: var(--light-blue);
-  color: var(--light-grey);
+  background-color: var(--gray-01);
+  color: var(--gray-03);
   display: flex;
   padding: 0.75em 1em;
   align-self: stretch;
@@ -1057,7 +1066,7 @@ button.unbound-button {
 }
 
 p.footer-header {
-  color: var(--light-grey);
+  color: var(--gray-03);
   font-size: 0.9375em;
   font-style: normal;
   font-weight: 450;
@@ -1074,7 +1083,7 @@ p.footer-header {
 }
 
 .footer-bottom p {
-  color: var( --light-grey);
+  color: var( --gray-03);
   font-size: 1em;
   line-height: 150%;
   font-style: normal;

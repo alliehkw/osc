@@ -15,8 +15,14 @@ function Certifications({ certification_data }) {
         </div>
         <div className="certifications-right">
           <h4>{certification_data.certificationsPageTitleRight}</h4>
-          {/* TO DO: figure out this rich text thing!!!  */}
-          <h5>{certification_data.certificationsPageContentRight}</h5>
+          <h5
+            className="richText"
+            dangerouslySetInnerHTML={{
+              __html: certification_data.certificationsPageContentRight,
+            }}
+          >
+            {/* {certification_data.certificationsPageContentRight} */}
+          </h5>
         </div>
       </div>
     </div>
