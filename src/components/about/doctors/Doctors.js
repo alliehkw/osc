@@ -1,4 +1,4 @@
-import Hero from "../Hero.js";
+import Hero from "../../Hero.js";
 import AboutSection from "./AboutSection.js";
 import Certifications from "./Certifications.js";
 import PhysiciansAssistant from "./PhysiciansAssistant.js";

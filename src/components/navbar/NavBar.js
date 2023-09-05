@@ -1,16 +1,31 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import DownCarrot from "./svgs/DownCarrot.js";
-import WhiteLogo from "./svgs/WhiteLogo.svg";
-import DarkLogo from "./svgs/DarkLogo.svg";
+import AboutDropDown from "./AboutDropDown.js";
+import PatientEdDropDown from "./PatientEdDropDown.js";
+import ResourcesDropDown from "./ResourcesDropDown.js";
+import DownCarrot from "../svgs/DownCarrot.js";
+import WhiteLogo from "../svgs/WhiteLogo.svg";
+import DarkLogo from "../svgs/DarkLogo.svg";
 import { useLocation } from "react-router-dom";
 
 function NavBar() {
   // TO DO: ask steve how he wants the buttons and stuff to transition on scroll
-  // TO DO: make the page scroll up to the to when you navigate between pages
-
+  // TO DO: make it so navbar dropdowns cant overlap!
   const [navbar, setNavbar] = useState(false);
   const location = useLocation();
+  const [dropDown, setDropDown] = useState({
+    about: false,
+    education: false,
+    resources: false,
+  });
+
+  const handleMouseEnter = (menuItem) => {
+    setDropDown({ ...dropDown, [menuItem]: true });
+  };
+
+  const handleMouseLeave = (menuItem) => {
+    setDropDown({ ...dropDown, [menuItem]: false });
+  };
 
   const changeNavbar = () => {
     if (window.scrollY >= 80) {
@@ -20,15 +35,13 @@ function NavBar() {
     }
   };
 
-  // const requestButtonStyles =
   window.addEventListener("scroll", changeNavbar);
-  console.log(location.pathname);
   return (
     <>
       <div className={navbar ? "navbar-container active" : "navbar-container"}>
         {/* TO DO: figure out navbar mapping and add it in */}
         <div className="navbar-split">
-          <li>
+          <ul>
             <Link to="/" end>
               {!navbar ? (
                 <div className="logo-container">
@@ -42,63 +55,61 @@ function NavBar() {
                 </div>
               )}
             </Link>
-          </li>
+          </ul>
           <div className="logo-gap"></div>
-          {/* TO DO: make this lead somewhere */}
-          <li>
-            <Link to="/doctors">
-              <div className="navbar-text-with-icon">
-                <p className="allCaps">ABOUT</p>
-                <DownCarrot svgColor={navbar ? "#003028" : "white"} />
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link to="/education">
-              <div className="navbar-text-with-icon">
-                <p className="allCaps">EDUCATION</p>
-                <DownCarrot svgColor={navbar ? "#003028" : "white"} />
-              </div>
-            </Link>
-          </li>
-          <li>
+          <div
+            className="menu-drop-down"
+            onMouseEnter={() => handleMouseEnter("about")}
+            onMouseLeave={() => handleMouseLeave("about")}
+          >
+            <div className="navbar-text-with-icon">
+              <p className="allCaps">about</p>
+              <DownCarrot svgColor={navbar ? "#003028" : "white"} />
+            </div>
+            <AboutDropDown isVisible={dropDown.about} />
+          </div>
+          <div
+            className="menu-drop-down"
+            onMouseEnter={() => handleMouseEnter("education")}
+            onMouseLeave={() => handleMouseLeave("education")}
+          >
+            <div className="navbar-text-with-icon">
+              <p className="allCaps">education</p>
+              <DownCarrot svgColor={navbar ? "#003028" : "white"} />
+            </div>
+            <PatientEdDropDown isVisible={dropDown.education} />
+          </div>
+          <ul>
             <Link to="/onsite-therapy">
               <div className="navbar-text-with-icon">
                 <p className="allCaps">therapy</p>
                 <DownCarrot svgColor={navbar ? "#003028" : "white"} />
               </div>
             </Link>
-          </li>
-          {/* TO DO: make this lead somewhere */}
-          <li>
-            {/* <Link to="/resources"> */}
+          </ul>
+          <div
+            className="menu-drop-down"
+            onMouseEnter={() => handleMouseEnter("resources")}
+            onMouseLeave={() => handleMouseLeave("resources")}
+          >
             <div className="navbar-text-with-icon">
               <p className="allCaps">resources</p>
               <DownCarrot svgColor={navbar ? "#003028" : "white"} />
             </div>
-            {/* </Link> */}
-          </li>
+            <ResourcesDropDown isVisible={dropDown.resources} />
+          </div>
         </div>
         <div className="navbar-split">
-          {/* QUSETION: no phone number in nav? */}
-          {/* <li>
-              <div className="navbar-text-with-icon">
-                <FaPhoneVolume class="icon-phone" />
-                <p className="allCaps">
-                  {data.allNavBar.nodes[0].oSCPhoneNumber}
-                </p>
-              </div>
-            </li> */}
           <div className="nav-buttons">
-            <li>
+            <ul>
               <button
                 id="navbutton"
                 className={navbar ? "white" : "transparent"}
               >
                 refer a patient
               </button>
-            </li>
-            <li>
+            </ul>
+            <ul>
               <button
                 id="navbutton"
                 className={
@@ -107,7 +118,7 @@ function NavBar() {
               >
                 request an appointment
               </button>
-            </li>
+            </ul>
           </div>
         </div>
         <Outlet />

@@ -1,13 +1,14 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar.js";
+import NavBar from "./components/navbar/NavBar.js";
 import Footer from "./components/Footer.js";
 import Subscribe from "./components/Subscribe.js";
 import Home from "./components/home/Home.js";
-import Doctors from "./components/doctors/Doctors.js";
+import Doctors from "./components/about/doctors/Doctors.js";
 import PatientEducation from "./components/patient-education/PatientEducation";
 import OnsiteTherapy from "./components/onsite-therapy/OnsiteTherapy.js";
 import { useQuery, gql } from "@apollo/client";
+import ScrollToTop from "./components/ScrollToTop";
 
 const app_data = gql`
   {
@@ -198,6 +199,7 @@ function App() {
       {!loading ? (
         <div className="App">
           <Router>
+            <ScrollToTop />
             <NavBar />
             <Routes>
               <Route

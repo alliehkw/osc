@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DoctorModal from "../Modals/DoctorModal.js";
+import DoctorModal from "../../Modals/DoctorModal.js";
 
 function AboutSection({ hero_data, doctors_data }) {
   const [showModal, setShowModal] = useState(false);
