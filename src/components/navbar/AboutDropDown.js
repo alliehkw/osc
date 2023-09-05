@@ -6,9 +6,14 @@ function AboutDropDown({ isVisible }) {
     <div className={isVisible ? "dropdown-menu" : "dropdown-menu hidden"}>
       <ul>
         <li>
-          {/* <Link to="/what-we-do"> */}
-          <p className="allCaps">what we do</p>
-          {/* </Link> */}
+          <Link to="/about-us">
+            <p className="allCaps">about us</p>
+          </Link>
+        </li>
+        <li>
+          <Link to="/what-we-do">
+            <p className="allCaps">what we do</p>
+          </Link>
         </li>
         <li>
           <Link to="/doctors">
@@ -18,9 +23,9 @@ function AboutDropDown({ isVisible }) {
           </Link>
         </li>
         <li>
-          {/* <Link to="/insurance-and-billing"> */}
-          <p className="allCaps">insurance and billing</p>
-          {/* </Link> */}
+          <Link to="/insurance-and-billing">
+            <p className="allCaps">insurance and billing</p>
+          </Link>
         </li>
       </ul>
     </div>

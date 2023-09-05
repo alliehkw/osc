@@ -79,11 +79,11 @@ function NavBar() {
             </div>
             <PatientEdDropDown isVisible={dropDown.education} />
           </div>
-          <ul>
+          <ul className="nav-item-sans-drop-down">
             <Link to="/onsite-therapy">
               <div className="navbar-text-with-icon">
                 <p className="allCaps">therapy</p>
-                <DownCarrot svgColor={navbar ? "#003028" : "white"} />
+                {/* <DownCarrot svgColor={navbar ? "#003028" : "white"} /> */}
               </div>
             </Link>
           </ul>

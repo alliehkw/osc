@@ -309,6 +309,10 @@ p {
   padding: 0;
 }
 
+ul.nav-item-sans-drop-down {
+  margin-right: 1em;
+}
+
 .dropdown-menu a {
   color: var(--gray-06);
   text-decoration: none;
@@ -421,11 +425,15 @@ div#hero.tall h1 {
 
 /* HOMEPAGE SECTIONS */
 
-.about-section-container {
+.about-section-container.white {
   background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.about-section-container.green {
+  background-color: var(--gray-01);
 }
 
 .about-section-text {
@@ -777,6 +785,27 @@ button.front-arrow {
   max-height: 3.375em;
   /* width: 100%; */
   display: block;
+}
+
+/* ABOUT US */
+
+.why-orthopaedics {
+  background-color: var(--osc-green-01);
+  padding: 6em;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+
+.why-orthopaedics h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.why-orthopaedics h5 {
+  width: 44em;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 2em;
 }
 
 /* DOCTORS */

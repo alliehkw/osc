@@ -6,7 +6,6 @@ import PhysiciansAssistant from "./PhysiciansAssistant.js";
 function Doctors({ data }) {
   return (
     <div className="doctors-container">
-      {/* <Hero hero_data={data.allDoctorsPage.nodes[0]} /> */}
       <Hero
         tagline={data.allDoctorsPage.nodes[0].doctorsPageTagLine}
         pageTitle={"doctors"}

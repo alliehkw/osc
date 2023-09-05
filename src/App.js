@@ -4,7 +4,10 @@ import NavBar from "./components/navbar/NavBar.js";
 import Footer from "./components/Footer.js";
 import Subscribe from "./components/Subscribe.js";
 import Home from "./components/home/Home.js";
+import AboutUs from "./components/about/aboutUs/AboutUs.js";
+import WhatWeDo from "./components/about/whatWeDo/WhatWeDo.js";
 import Doctors from "./components/about/doctors/Doctors.js";
+import InsuranceandBilling from "./components/about/insuranceAndBilling/InsuranceAndBilling.js";
 import PatientEducation from "./components/patient-education/PatientEducation";
 import OnsiteTherapy from "./components/onsite-therapy/OnsiteTherapy.js";
 import { useQuery, gql } from "@apollo/client";
@@ -187,6 +190,26 @@ const app_data = gql`
         therapistTitle
       }
     }
+    allAboutUsPage {
+      nodes {
+        aboutUsDescription
+        aboutUsOfferingsContent
+        aboutUsOfferingsHeader
+        aboutUsOfferingsImage {
+          altText
+          mediaItemUrl
+        }
+        aboutUsQualityContent
+        aboutUsQualityHeader
+        aboutUsQualityImage {
+          altText
+          mediaItemUrl
+        }
+        aboutUsTagline
+        whyOrthopaedicsContent
+        whyOrthopaedicsHeader
+      }
+    }
   }
 `;
 
@@ -207,7 +230,18 @@ function App() {
                 path="/"
                 element={<Home data={data} loading={loading} />}
               />
+              <Route
+                path="/about-us"
+                element={
+                  <AboutUs about_us_data={data.allAboutUsPage.nodes[0]} />
+                }
+              />
+              <Route path="/what-we-do" element={<WhatWeDo />} />
               <Route path="/doctors" element={<Doctors data={data} />} />
+              <Route
+                path="/insurance-and-billing"
+                element={<InsuranceandBilling />}
+              />
               <Route
                 path="/education"
                 element={<PatientEducation data={data} />}

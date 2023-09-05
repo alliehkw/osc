@@ -1,5 +1,5 @@
 import Hero from "../Hero.js";
-import AboutSection from "./AboutSection.js";
+import AboutSection from "../AboutSection.js";
 import PostOpCare from "./PostOpCare.js";
 import Therapist from "./Therapist.js";
 
@@ -15,6 +15,7 @@ function OnsiteTherapy({ data }) {
         about_section_data={
           data.allTherapyPage.nodes[0].therapyPageAboutSection
         }
+        color={"white"}
       />
       <PostOpCare postOpCare_data={data.allTherapyPage.nodes[0]} />
       <Therapist therapist_data={data.allTherapyPage.nodes[0]} />

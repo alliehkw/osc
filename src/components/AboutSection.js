@@ -1,6 +1,13 @@
-function AboutSection({ about_section_data }) {
+function AboutSection({ about_section_data, color }) {
+  console.log(color);
   return (
-    <div id="therapy-about-section" className="about-section-container">
+    <div
+      className={
+        color === "green"
+          ? "about-section-container green"
+          : "about-section-container white"
+      }
+    >
       <div className="about-section-text">
         <h5
           className="richText"
