@@ -11,14 +11,14 @@ function AboutUs({ about_us_data }) {
       <Hero
         tagline={about_us_data.aboutUsTagline}
         pageTitle={"about us"}
-        hero_size={"tall"}
+        hero_size={"short"}
       />
       <AboutSection
         about_section_data={about_us_data.aboutUsDescription}
         color={"green"}
       />
       <Quality about_us_data={about_us_data} />
-      <Offerings about_us_data={about_us_data}/>
+      <Offerings about_us_data={about_us_data} />
       <WhyOrthopaedics
         header={about_us_data.whyOrthopaedicsHeader}
         content={about_us_data.whyOrthopaedicsContent}

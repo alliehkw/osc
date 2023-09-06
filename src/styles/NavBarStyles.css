@@ -128,3 +128,8 @@ ul.nav-item-sans-drop-down {
   padding-right: 1em;
   margin-right: 1em;
 }
+
+.navbar-container svg.down-carrot {
+  margin-left: 0.25em;
+  margin-right: 1em;
+}

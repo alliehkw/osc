@@ -68,6 +68,7 @@ h3 {
   font-size: 2.25em;
   line-height: 111.11%;
   font-family: 'Petersburg, Regular';
+  font-weight: 400;
 }
 
 h4 {
@@ -180,10 +181,6 @@ p {
 }
 
 /* ICONS */
-.down-carrot {
-  margin-left: 0.25em;
-  margin-right: 1em;
-}
 
 .svg-arrow-NE {
   position: absolute;

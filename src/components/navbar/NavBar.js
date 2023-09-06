@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/NavBarStyles.css";
 import { Link, Outlet } from "react-router-dom";
-import AboutDropDown from "./AboutDropDown.js";
+import CompanyDropDown from "./CompanyDropDown.js";
 import PatientEdDropDown from "./PatientEdDropDown.js";
 import ResourcesDropDown from "./ResourcesDropDown.js";
 import DownCarrot from "../svgs/DownCarrot.js";
@@ -64,10 +64,10 @@ function NavBar() {
             onMouseLeave={() => handleMouseLeave("about")}
           >
             <div className="navbar-text-with-icon">
-              <p className="allCaps">about</p>
+              <p className="allCaps">company</p>
               <DownCarrot svgColor={navbar ? "#003028" : "white"} />
             </div>
-            <AboutDropDown isVisible={dropDown.about} />
+            <CompanyDropDown isVisible={dropDown.about} />
           </div>
           <div
             className="menu-drop-down"

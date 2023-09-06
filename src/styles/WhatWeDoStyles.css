@@ -1,0 +1,45 @@
+/* WHAT WE DO */
+
+.drop-downs-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    width: 62.25em;
+    justify-content: center;
+    margin: auto;
+}
+
+.section + .section {
+    margin-top: 2.75em;
+}
+
+p.allCaps.dd {
+    color: var(--osc-brand-color);
+    margin: 0;
+    margin-bottom: 1.4em;
+    margin-top: 2.8em;
+}
+
+.title-with-carrot {
+    display: flex;
+    border-bottom: solid 1px var(--gray-02);
+    width: 100%;
+    position: relative;
+    
+}
+
+.carrot {
+    position: absolute;
+    right: 0;
+    bottom: 0.75em;
+}
+
+svg.down-carrot {
+    margin: 0;
+}
+
+p {
+    margin-top: 1.2em;
+}

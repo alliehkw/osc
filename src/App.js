@@ -218,6 +218,23 @@ const app_data = gql`
         whyOrthopaedicsHeader
       }
     }
+    whatWeDo {
+      nodes {
+        orthoCareTitle
+        researchContent
+        researchTitle
+        therapyTitle
+        whatWeDoAboutSection
+        whatWeDoTagline
+      }
+    }
+    whatWeDoDropDowns {
+      nodes {
+        dropDownCategory
+        dropDownContent
+        dropDownTitle
+      }
+    }
   }
 `;
 
@@ -244,7 +261,15 @@ function App() {
                   <AboutUs about_us_data={data.allAboutUsPage.nodes[0]} />
                 }
               />
-              <Route path="/what-we-do" element={<WhatWeDo />} />
+              <Route
+                path="/what-we-do"
+                element={
+                  <WhatWeDo
+                    what_we_do_data={data.whatWeDo.nodes[0]}
+                    drop_downs_data={data.whatWeDoDropDowns.nodes}
+                  />
+                }
+              />
               <Route path="/doctors" element={<Doctors data={data} />} />
               <Route
                 path="/insurance-and-billing"
