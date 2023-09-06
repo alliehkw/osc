@@ -193,3 +193,13 @@ p {
   margin: 0;
 }
 
+/* SCROLL BAR */
+/* TO DO: MAKE THIS WORK!  */
+
+div::-webkit-scrollbar-thumb {
+  background-color: var(--osc-brand-color);
+}
+
+div::-webkit-scrollbar-track {
+  background-color: var(--gray-02);
+}

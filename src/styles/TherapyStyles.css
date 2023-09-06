@@ -69,3 +69,43 @@
     margin-top: 0.4em;
     margin-bottom: 1.4em;
   }
+
+  .therapy-resources-container {
+    background-color: var(--gray-01);
+    padding: 6em;
+    padding-left: 7.5em;
+    padding-right: 7.5em;
+  }
+
+  .therapy-resources-container h2 {
+    width: 16em;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+
+  .therapy-images {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  .therapy-image {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 28em;
+    margin-right: 1.5em;
+    padding-bottom: 2em;
+  }
+
+  .therapy-image:last-child {
+    margin-right: 0;
+  }
+
+  .therapy-image img {
+    flex-shrink: 0;
+    height: 100%;
+    width: auto;
+  }

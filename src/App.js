@@ -187,6 +187,15 @@ const app_data = gql`
         therapistName
         therapistTagLine
         therapistTitle
+        therapyResourcesTagline
+      }
+    }
+    therapyResourcesImages {
+      nodes {
+        therapyResourceImage {
+          altText
+          mediaItemUrl
+        }
       }
     }
     allAboutUsPage {
@@ -247,7 +256,12 @@ function App() {
               />
               <Route
                 path="/onsite-therapy"
-                element={<OnsiteTherapy data={data} />}
+                element={
+                  <OnsiteTherapy
+                    therapy_data={data.allTherapyPage.nodes[0]}
+                    therapy_images={data.therapyResourcesImages.nodes}
+                  />
+                }
               />
             </Routes>{" "}
           </Router>

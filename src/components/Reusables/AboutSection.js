@@ -1,5 +1,4 @@
 function AboutSection({ about_section_data, color }) {
-  console.log(color);
   return (
     <div
       className={
