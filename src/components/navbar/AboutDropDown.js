@@ -17,9 +17,7 @@ function AboutDropDown({ isVisible }) {
         </li>
         <li>
           <Link to="/doctors">
-            <p className="allCaps">
-              <i>doctors</i>
-            </p>
+            <p className="allCaps">doctors</p>
           </Link>
         </li>
         <li>
