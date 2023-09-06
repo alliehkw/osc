@@ -1,0 +1,71 @@
+/* ONSITE THERAPY */
+
+.post-op-care-container {
+    background-color: var(--osc-green-01);
+  }
+  .post-op-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 6em;
+    padding-left: 7.5em;
+    padding-right: 7.5em;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .post-op-care-left {
+    width: 27em;
+    text-align: left;
+  }
+  
+  .post-op-care-left h2 {
+    margin-bottom: 0.83em;
+  }
+  
+  .post-op-care-right {
+    height: 45.5em;
+  }
+  
+  .post-op-care-right img {
+    overflow: hidden;
+  }
+  
+  .therapist-container {
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+  
+  .therapist-header {
+    width: 40em;
+    margin: auto;
+    margin-bottom: 4.5em;
+  }
+  
+  .therapist-header h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  .therapist {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    padding-left: 7.5em;
+    padding-right: 7.5em;
+    margin: auto;
+    margin-top: 4.5em; 
+  }
+  
+  .therapist-image {
+    width: 17.625em;
+    height: auto;
+  }
+  
+  .therapist-description {
+    text-align: left;
+    margin-left: 7.8757em;
+  }
+  
+  .therapist-description h5 {
+    margin-top: 0.4em;
+    margin-bottom: 1.4em;
+  }

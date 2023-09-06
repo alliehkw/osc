@@ -1,4 +1,5 @@
-import Hero from "../../Hero.js";
+import "../../../styles/DoctorsStyles.css";
+import Hero from "../../Reusables/Hero.js";
 import AboutSection from "./AboutSection.js";
 import Certifications from "./Certifications.js";
 import PhysiciansAssistant from "./PhysiciansAssistant.js";

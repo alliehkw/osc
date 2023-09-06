@@ -1,3 +1,5 @@
+import "../../styles/HeroStyles.css";
+
 function Hero({ tagline, pageTitle, hero_size }) {
   return (
     <div id="hero" className={hero_size}>

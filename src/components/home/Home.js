@@ -1,3 +1,4 @@
+import "../../styles/HomePageStyles.css";
 import Hero from "./Hero.js";
 import AboutSection from "./AboutSection.js";
 import RatingSection from "./RatingSection.js";

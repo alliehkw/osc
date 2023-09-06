@@ -1,5 +1,6 @@
-import Hero from "../Hero.js";
-import AboutSection from "../AboutSection.js";
+import "../../styles/TherapyStyles.css";
+import Hero from "../Reusables/Hero.js";
+import AboutSection from "../Reusables/AboutSection.js";
 import PostOpCare from "./PostOpCare.js";
 import Therapist from "./Therapist.js";
 
@@ -19,6 +20,8 @@ function OnsiteTherapy({ data }) {
       />
       <PostOpCare postOpCare_data={data.allTherapyPage.nodes[0]} />
       <Therapist therapist_data={data.allTherapyPage.nodes[0]} />
+      {/* TO DO: ADD IN THIS LAST SECTION  */}
+      <h2>ADD IN ONSITE THERAPY RESOURCES CAROSEL</h2>
     </div>
   );
 }

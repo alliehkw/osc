@@ -1,5 +1,6 @@
-import Hero from "../../Hero.js";
-import AboutSection from "../../AboutSection.js";
+import "../../../styles/AboutUsStyles.css";
+import Hero from "../../Reusables/Hero.js";
+import AboutSection from "../../Reusables/AboutSection.js";
 import Quality from "./Quality.js";
 import Offerings from "./Offerings.js";
 import WhyOrthopaedics from "./WhyOrthopaedics.js";

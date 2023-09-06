@@ -1,8 +1,7 @@
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar.js";
-import Footer from "./components/Footer.js";
-import Subscribe from "./components/Subscribe.js";
+import Footer from "./components/Reusables/Footer.js";
+import Subscribe from "./components/Reusables/Subscribe.js";
 import Home from "./components/home/Home.js";
 import AboutUs from "./components/about/aboutUs/AboutUs.js";
 import WhatWeDo from "./components/about/whatWeDo/WhatWeDo.js";
@@ -11,7 +10,7 @@ import InsuranceandBilling from "./components/about/insuranceAndBilling/Insuranc
 import PatientEducation from "./components/patient-education/PatientEducation";
 import OnsiteTherapy from "./components/onsite-therapy/OnsiteTherapy.js";
 import { useQuery, gql } from "@apollo/client";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/Reusables/ScrollToTop";
 
 const app_data = gql`
   {

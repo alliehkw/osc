@@ -1,0 +1,130 @@
+/* NAVBAR */
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  width: 100vw; 
+  height: 4.5em;
+  position: fixed;
+  background-color: transparent;
+  color: var(--white);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.navbar-container a {
+  color: var(--white);
+  transition: color 0.5s ease-in-out;
+}
+
+.navbar-container.active {
+  background-color: var(--white);
+  color: var(--gray-06);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.navbar-container.active a {
+  color: var(--gray-06);
+  transition: color 0.5s ease-in-out;
+}
+
+.navbar-split {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-container.active {
+  transition: opacity 0.5s ease-in-out;
+  width: 82px;
+}
+
+.logo-container img {
+  display: block;
+  flex-shrink: 0;
+  width: 82px;
+  height: auto;
+}
+
+.logo-gap {
+  width: 1.875em;
+}
+
+.navbar-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.nav-item-sans-drop-down {
+  margin-right: 1em;
+}
+
+.dropdown-menu a {
+  color: var(--gray-06);
+  text-decoration: none;
+}
+
+.dropdown-menu li {
+  transition: all linear 0.3s;
+  padding: 0.25em;
+}
+
+.dropdown-menu li:hover {
+  /* background: var(--gray-01); */
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--osc-brand-color);
+}
+
+.dropdown-menu a:hover {
+  /* background: var(--gray-01); */
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--osc-brand-color);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  background-color: var(--white);
+  color: var(--gray-06);
+  z-index: 3;
+  transition: all linear 0.3s;
+  display: block;
+}
+
+.dropdown-menu.hidden {
+  display: none;
+}
+
+.menu-drop-down {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+}
+
+.navbar-text-with-icon {
+  display: flex;
+  align-items: center;
+}
+
+.nav-buttons {
+  display: flex;
+}
+
+.nav-buttons button{
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-right: 1em;
+}

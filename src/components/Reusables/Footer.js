@@ -1,3 +1,5 @@
+import "../../styles/SubscribeAndFooterStyles.css";
+
 function Footer({ footer_data }) {
   const logo = {
     url: footer_data.oSCLogo.mediaItemUrl,

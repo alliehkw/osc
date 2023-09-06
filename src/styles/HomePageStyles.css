@@ -1,0 +1,365 @@
+/* TO DO: adjust poster and video so that the image always sits on the same spot of the page */
+/* TO DO: get rid of double click to play video */
+/* TO DO: make it so when the video starts playing it doesn't make the screen jump to a certain position */
+
+/* HOMEPAGE SECTIONS */
+
+.about-section-container.white {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .about-section-container.green {
+    background-color: var(--gray-01);
+  }
+  
+  .about-section-text {
+    padding: 18em;
+    padding-top: 5.5em;
+    padding-bottom: 6em;
+  }
+  
+  .about-section-buttons button {
+    margin: 0.5em;
+    margin-top: 2.5em;
+  }
+  
+  .about-section-images {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 6em;
+  }
+  
+  .about-section-image {
+    width: 24em;
+    height: 20em;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.125em;
+    position: relative;
+    margin-left: 0.375em;
+    margin-right: 0.375em;
+  }
+  
+  .image-wrapper img {
+    height: 20em;
+    vertical-align: middle;
+  }
+  
+  .image-wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    border-radius: 2px;
+  }
+  
+  .about-section-image h5 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    color: var(--white);
+    padding: 1.875em;
+    margin: 0;
+  }
+  
+  /* RATING SECTION */
+  
+  .rating-section-container {
+    background-color: var(--gray-01);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  
+  .rating-section-container h2 {
+    padding-top: 2em;
+    padding-bottom: 1.1667em;
+    width: 15em;
+    margin: auto;
+  }
+  
+  .ratings {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6em;
+    max-width: 75em;
+    margin: auto;
+  }
+  
+  .ratings-block {
+    padding: 2.5em;
+  }
+  
+  .ratings-block + .ratings-block {
+    margin-left: 4em;
+  }
+  
+  .ratings-circle {
+    background-color: var(--osc-brand-color);
+    width: 2.625em;
+    height: 3em;
+    padding: 2.5em;
+    border-radius: 6.25em;
+    margin: auto;
+    color: var(--white);
+    margin-bottom: 2.1875em;
+  }
+  
+  .rating-section-container p {
+    font-size: 2.5em;
+    line-height: 120%;
+    font-family: 'Petersburg, Regular';
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  /* REASONS SECTION && LATEST NEWS SECTION*/
+  
+  .cards-container {
+    padding-bottom: 6em;
+  }
+  
+  .cards-container h2 {
+    padding-bottom: 1.5em;
+    padding-top: 2em;
+    width: 10em;
+    margin: auto;
+  }
+  
+  .cards-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .card-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+    overflow: hidden;
+    max-width: 24em;
+  }
+  
+  .card-image {
+    height: auto;
+    width: 24em;
+    margin-bottom: 1.5em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .card-image img {
+    display: block;
+    flex-shrink: 0;
+    width: 100%;
+    max-height: 100%; 
+  }
+  
+  .reasons-number {
+    background-color: var(--osc-brand-color);
+    height: 3.5em;
+    width: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    position: absolute;
+    z-index: 2;
+    top: 1em;
+    left: 1em;
+  }
+  
+  .cards-block h5, h6{
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  
+  .read-more {
+    font-family: 'Apertura, Regular';
+    font-size: 0.9375em;
+    line-height: 106.667%;
+    font-style: normal;
+    font-weight: 450;
+    letter-spacing: 0.046875em;
+    text-transform: uppercase;
+    color: var(--osc-brand-color);
+    text-align: left;
+  }
+  
+  /* TESTIMONIALS */
+  
+  .testimonials-container {
+    background-color: var(--white);
+    padding: 6em;
+    display: flex;
+    justify-content: center;
+    height: 31em;
+  }
+  
+  .testimonials-container-left {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 36.5em;
+    height: 100%;
+    justify-content: space-between;
+    margin-right: 2em;
+  }
+  
+  .testimonials-container-left h2 {
+    max-width: 12em;
+  }
+  
+  .review-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-button-container h5 {
+    margin-top: 0.75em;
+    margin-bottom: 1.5em;
+    width: 19.2em;
+  }
+  
+  .testimonials-container-right {
+    width: 35em;
+    position: relative;
+    margin-left: 2em;
+  }
+  
+  .testimonial-block {
+    background-color: var(--gray-01);
+    height: 100%;
+  }
+  
+  #testimonial {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2.5em;
+  }
+  
+  .testimonial {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+  
+  #testimonial p.review {
+    color: var(--gray-06);
+    margin-bottom: 1.5em;
+    max-height: 15em;
+    overflow: auto;
+    margin-top: 1.5em;
+  }
+  
+  #testimonial p.reviewName {
+    font-family: 'Apertura, Regular';
+    font-size: 1.25em;
+    font-weight: 450;
+    line-height: 140%;
+    color: var(--black);
+  }
+  
+  #testimonial p.allCaps {
+    color: var(--gray-04);
+  }
+  
+  .arrows {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    bottom: -2em;
+    right: 2em;
+    justify-content: space-between;
+  }
+  
+  button.back-arrow {
+    background-color: var(--white);
+    width: 3.5em;
+    height: 3.5em;
+    margin-right: 1em;
+  }
+  
+  button.front-arrow {
+    background-color: var(--osc-brand-color);
+    border-color: var(--osc-brand-color);
+    width: 3.5em;
+    height: 3.5em;
+  }
+  
+  /* ACCOLADES */
+  
+  .accolades-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+  
+  .accolades {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 75em;
+    flex-wrap: wrap;
+    margin-top: 2.5em;
+  }
+  
+  .accolade-block {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5em;
+    height: 6.25em;
+    overflow: hidden;
+    max-width: 50%;
+  }
+  
+  .stars #accolade-stars {
+    margin-bottom: 0;
+  }
+  
+  .brand-images {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+  }
+  
+  .brand-images-gap {
+    width: 0.75em;
+  }
+  
+  .brand-name img, .brand-logo img {
+    max-height: 3.375em;
+    display: block;
+  }

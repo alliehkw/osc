@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../styles/NavBarStyles.css";
 import { Link, Outlet } from "react-router-dom";
 import AboutDropDown from "./AboutDropDown.js";
 import PatientEdDropDown from "./PatientEdDropDown.js";

@@ -1,0 +1,229 @@
+/* DOCTORS */
+
+.doctors-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .doctors-page-about-section-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 4.8em;
+    padding-bottom: 4.8em;
+    max-width: 75em;
+  }
+  
+  .doctor-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .doctor-summary + .doctor-summary {
+    margin-left: 5em;
+  }
+  
+  .doctor-profile-summary {
+    color: var(--gray-05);
+  }
+  
+  .doctors-page-about-section-text {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25em;
+    max-width: 486px;
+    margin-right: 4.3125em;
+  }
+  
+  .doctors-page-about-section-doctors {
+    display: flex;
+  }
+  
+  .doctor-summary-image {
+    width: 17.643375em;
+    height: 17.643375em;
+    margin-bottom: 1.25em;
+  }
+  
+  h6.specialty {
+    font-weight: 450;
+  }
+  
+  h4.doctors-name {
+    color: var(--osc-brand-color);
+  }
+  
+  button.unbound-button {
+    background-color: var(--white);
+    border: 0;
+    color: var(--osc-brand-color);
+    margin-top: 0.25em;
+  }
+  
+  .doctor-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 75em;
+  }
+  
+  .doctor-modal-container {
+    display: flex;
+    padding: 4.5em;
+    padding-top: 6em;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    overflow: auto;
+    max-height: 60vh;
+  }
+  
+  .doctor-modal-left {
+    width: auto;
+  }
+  
+  .doctor-modal-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75em;
+  }
+  
+  .doctor-modal-buttons button.unbound-button {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+  
+  .doctor-modal-buttons + .doctor-modal-buttons {
+    margin-top: 0.8em;
+  }
+  
+  .doctor-modal-right {
+    width: 38em;
+    margin-left: 5em;
+  }
+  
+  .doctor-modal-right h3 {
+    margin-top: 0;
+    margin-bottom:  0.667em;
+  }
+  
+  .medical-ed-images {
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .medical-ed-images img {
+    width: 12.5em;
+  }
+  
+  .doctor-modal-left .doctor-summary-image {
+    width: 12.5em;
+    height: 12.5em;
+  }
+  
+  .doctor-modal-left .doctor-summary-image img {
+    height: 12.5em;
+    width: auto;
+  }
+  
+  .exit-button {
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 1.5em;
+    right: 2.5em;
+  }
+  
+  .certifications-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    width: 100%;
+    background-color: var(--gray-01);
+  }
+  
+  .certifications-page-container h2 {
+    margin-bottom: 1.75em;
+    width: 17em;
+  }
+  
+  .certifications-content {
+    display: flex;
+    max-width: 1200px;
+    padding-left: 7.5em;
+    padding-right: 7.5em;
+  }
+  
+  .certifications-left {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .certifications-right {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 7.5em;
+    min-width: 50%;
+  }
+  
+  .certifications-page-container h4 {
+    margin-bottom: 1em;
+  }
+  
+  .certifications-page-container h5 {
+    color: var(--gray-05);
+    font-weight: 400;
+  }
+  
+  .boards-cert-image {
+    padding: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 4.5em;
+  }
+  
+  .PA-container {
+    padding-top: 6em;
+    padding-bottom: 7.375em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 7.5em;
+    padding-right: 7.5em;
+  }
+  
+  .PA-container h2 {
+    width: 11.5em;
+    margin-bottom: 2em;
+  }
+  
+  .PA-container h4 {
+    margin-bottom: 1em;
+  }
+  
+  .PA-content {
+    text-align: left;
+    margin-left: 7.5em;
+  }
+  
+  .PA-content p {
+    color: var(--gray-05);
+  }
+  
+  .PA-info {
+    display: flex;
+    justify-content: space-between;
+  }

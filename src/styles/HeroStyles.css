@@ -1,0 +1,27 @@
+/* HERO */
+#hero {
+    background-color: var(--osc-brand-color);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+  }
+  
+  div#hero.short {
+    height: 29.5em;
+  }
+  
+  div#hero.tall {
+    height: 40.625em;
+  }
+  
+  #hero p {
+    margin-bottom: 1em;
+  }
+  
+  div#hero.tall h1 {
+    width: 10em;
+  }

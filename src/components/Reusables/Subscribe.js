@@ -1,3 +1,5 @@
+import "../../styles/SubscribeAndFooterStyles.css";
+
 function Subscribe({ subscribe_data, header }) {
   const subscribeBlock = subscribe_data.map((field, index) => {
     return (

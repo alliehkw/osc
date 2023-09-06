@@ -1,5 +1,5 @@
-import Hero from "../Hero.js";
-import AboutSection from "./AboutSection.js";
+import Hero from "../Reusables/Hero.js";
+import AboutSection from "../Reusables/AboutSection.js";
 
 function PatientEducation({ data }) {
   return (
@@ -11,7 +11,12 @@ function PatientEducation({ data }) {
         pageTitle={"patient education"}
         hero_size={"tall"}
       />
-      <AboutSection about_section_data={data.allPatientEducationPage.nodes[0].patientEducationPageAboutSection}/>
+      <AboutSection
+        about_section_data={
+          data.allPatientEducationPage.nodes[0].patientEducationPageAboutSection
+        }
+        color={"green"}
+      />
     </div>
   );
 }

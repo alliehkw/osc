@@ -1,0 +1,21 @@
+/* ABOUT US */
+
+.why-orthopaedics {
+    background-color: var(--osc-green-01);
+    padding: 6em;
+    padding-left: 7.5em;
+    padding-right: 7.5em;
+  }
+  
+  .why-orthopaedics h3 {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .why-orthopaedics h5 {
+    width: 44em;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 2em;
+  }
+  
