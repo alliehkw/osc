@@ -17,8 +17,8 @@ function AboutUs({ about_us_data }) {
         about_section_data={about_us_data.aboutUsDescription}
         color={"green"}
       />
-      <Quality />
-      <Offerings />
+      <Quality about_us_data={about_us_data} />
+      <Offerings about_us_data={about_us_data}/>
       <WhyOrthopaedics
         header={about_us_data.whyOrthopaedicsHeader}
         content={about_us_data.whyOrthopaedicsContent}

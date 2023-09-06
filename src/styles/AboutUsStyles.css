@@ -1,21 +1,58 @@
 /* ABOUT US */
 
+.block-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 34.5em;
+  width: 34.875em;
+}
+
+.image img {
+  flex-shrink: 0;
+  height: 100%;
+  width: auto;
+}
+
+.text {
+  width: 30.375em;
+  text-align: left;
+}
+
+.text p {
+  margin-top: 2em;
+}
+
+.block-container > .image + .text, .block-container > .text + .image {
+  margin-left: 4em;
+}
+
 .why-orthopaedics {
-    background-color: var(--osc-green-01);
-    padding: 6em;
-    padding-left: 7.5em;
-    padding-right: 7.5em;
-  }
+  background-color: var(--osc-green-01);
+  padding: 6em;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
   
-  .why-orthopaedics h3 {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .why-orthopaedics h5 {
-    width: 44em;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 2em;
-  }
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.why-orthopaedics h5 {
+  width: 44em;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 2em;
+}
   
