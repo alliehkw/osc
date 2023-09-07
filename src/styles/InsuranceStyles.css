@@ -1,0 +1,23 @@
+/* INSURANCE AND BILLING */
+
+#insurance {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    width: 49em;
+    margin: auto;
+    padding-top: 4.8em;
+    padding-bottom: 4.8em;
+}
+
+.billing-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.67em;
+}
+
+.billing-links p.allCaps {
+    color: var(--osc-brand-color);
+    font-weight: 450;
+}

@@ -39,7 +39,7 @@ svg.down-carrot {
     margin: 0;
 }
 
-.hide-show p {
+.hide-show p, .research-text p {
     margin-top: 1.2em;
 }
 

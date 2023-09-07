@@ -235,6 +235,23 @@ const app_data = gql`
         dropDownTitle
       }
     }
+    allInsuranceAndBillingPage {
+      nodes {
+        creditAndPaymentPDF {
+          altText
+          mediaItemUrl
+        }
+        creditAndPaymentTitle
+        creditCardAboutSection
+        insuranceAndBillingAboutSection
+        insuranceAndBillingTagline
+        noticeOfPrivacyPracticesPDF {
+          altText
+          mediaItemUrl
+        }
+        noticeOfPrivacyPracticesTitle
+      }
+    }
   }
 `;
 
@@ -273,7 +290,13 @@ function App() {
               <Route path="/doctors" element={<Doctors data={data} />} />
               <Route
                 path="/insurance-and-billing"
-                element={<InsuranceandBilling />}
+                element={
+                  <InsuranceandBilling
+                    insurance_and_billing_data={
+                      data.allInsuranceAndBillingPage.nodes[0]
+                    }
+                  />
+                }
               />
               <Route
                 path="/education"

@@ -92,7 +92,7 @@ function WhatWeDoDropDowns({ what_we_do_data, drop_downs_data }) {
       </div>
       <div className="section">
         <h3 className="section-title">{what_we_do_data.researchTitle}</h3>
-        <div className="hide-show">
+        <div className="research-text">
           <p
             className="richText body-text"
             dangerouslySetInnerHTML={{
