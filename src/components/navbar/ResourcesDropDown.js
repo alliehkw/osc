@@ -6,9 +6,9 @@ function ResourcesDropDown({ isVisible }) {
     <div className={isVisible ? "dropdown-menu" : "dropdown-menu hidden"}>
       <ul>
         <li>
-          {/* <Link to="/our-research"> */}
-          <p className="allCaps">our research</p>
-          {/* </Link> */}
+          <Link to="/our-research">
+            <p className="allCaps">our research</p>
+          </Link>
         </li>
         <li>
           {/* <Link to="/dr-david-f-scott-publications"> */}

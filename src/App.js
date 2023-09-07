@@ -9,6 +9,7 @@ import Doctors from "./components/about/doctors/Doctors.js";
 import InsuranceandBilling from "./components/about/insuranceAndBilling/InsuranceAndBilling.js";
 import PatientEducation from "./components/patient-education/PatientEducation";
 import OnsiteTherapy from "./components/onsite-therapy/OnsiteTherapy.js";
+import OurResearch from "./components/our-research/OurResearch.js";
 import { useQuery, gql } from "@apollo/client";
 import ScrollToTop from "./components/Reusables/ScrollToTop";
 
@@ -252,6 +253,30 @@ const app_data = gql`
         noticeOfPrivacyPracticesTitle
       }
     }
+    allOurResearchPage {
+      nodes {
+        currentResearchTitle
+        ongoingStudiesTitle
+        ourResearchAboutSection
+        ourResearchImage {
+          altText
+          mediaItemUrl
+        }
+        ourResearchTagline
+        pastResearchTitle
+      }
+    }
+    researchProjects {
+      nodes {
+        projectMediaLink
+        projectMedia {
+          altText
+          mediaItemUrl
+        }
+        projectDescription
+        typeOfProject
+      }
+    }
   }
 `;
 
@@ -308,6 +333,15 @@ function App() {
                   <OnsiteTherapy
                     therapy_data={data.allTherapyPage.nodes[0]}
                     therapy_images={data.therapyResourcesImages.nodes}
+                  />
+                }
+              />
+              <Route
+                path="/our-research"
+                element={
+                  <OurResearch
+                    our_research_data={data.allOurResearchPage.nodes[0]}
+                    active_projects_data={data.researchProjects.nodes}
                   />
                 }
               />

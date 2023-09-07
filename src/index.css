@@ -119,6 +119,25 @@ p.allCaps {
   letter-spacing: 0.0875em;
 }
 
+p.allCaps.green {
+ color: var(--osc-brand-color);
+}
+
+p.allCaps.gray {
+  color: var(--gray-06);
+}
+
+p.label {
+  color: var(--gray-04);
+  text-align: center;
+  font-family: 'Apertura, Regular';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+}
+
 a {
   text-decoration: none;
   color: var(--body-text);
@@ -155,6 +174,14 @@ button.transparent {
   background-color: transparent;
   border-color: var(--white);
   color: var(--white);
+}
+
+button.unbound-button {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 p {
