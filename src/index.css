@@ -1,6 +1,7 @@
 :root {
   --osc-brand-color: #008771;
   --osc-green-01: #DDF9F4;
+  --osc-green-05: #004154;
   --osc-green-06: #015143;
   --osc-green-07: #003028;
   --body-text: #1C3A49;
@@ -131,7 +132,7 @@ p.label {
   color: var(--gray-04);
   text-align: center;
   font-family: 'Apertura, Regular';
-  font-size: 16px;
+  font-size: 1em;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;

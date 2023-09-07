@@ -101,3 +101,75 @@
 .project p.label {
     margin-top: 0.75em;
 }
+
+.past-projects {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.past-project {
+    display: flex;
+    width: 24em;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3em;
+}
+
+p.projectTitle {
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: 'Petersburg, Regular';
+    font-size: 0.875em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+  }
+
+p.projectAuthor {
+    color: var(--white);
+    text-align: center;
+    font-family: 'Apertura, Regular';
+    font-size: 0.5em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.022em;
+    text-transform: uppercase;
+}
+
+p.project-title {
+    color: var(--gray-06);
+    font-family: 'Apertura, Regular';
+    font-size: 0.875em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.035;
+    text-transform: uppercase;
+}
+
+p.project-content {
+    color: var(--gray-05);
+    font-family: 'Apertura, Regular';
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    margin-top: 0.5em;
+}
+.green-box {
+    border-radius: 0.125em;
+    background: linear-gradient(180deg, var(--osc-brand-color) 0%, var(--osc-green-05) 100%);
+    width: 11.625em;
+    height: 16.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 4.2em 0.8em 2.325em 0.8em;
+    gap: 8.3em;
+    flex-shrink: 0;
+    margin-bottom: 1.5em;
+}

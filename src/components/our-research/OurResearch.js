@@ -3,7 +3,11 @@ import AboutSection from "./AboutSection.js";
 import ResearchDetails from "./ResearchDetails.js";
 import "../../styles/OurResearchStyles.css";
 
-function OurResearch({ our_research_data, active_projects_data }) {
+function OurResearch({
+  our_research_data,
+  active_projects_data,
+  past_research,
+}) {
   return (
     <div className="our-research-container">
       <Hero
@@ -15,6 +19,7 @@ function OurResearch({ our_research_data, active_projects_data }) {
       <ResearchDetails
         our_research_data={our_research_data}
         active_projects_data={active_projects_data}
+        past_research={past_research}
       />
     </div>
   );

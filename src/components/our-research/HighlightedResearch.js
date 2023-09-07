@@ -1,5 +1,4 @@
 function HighlightedResearch({ title, project_data }) {
-  console.log(project_data);
   const projectsBlock = project_data.map((project, index) => {
     return (
       <div key={index} className="project">

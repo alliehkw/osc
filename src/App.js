@@ -277,6 +277,17 @@ const app_data = gql`
         typeOfProject
       }
     }
+    pastResearchProjects {
+      nodes {
+        projectAuthor
+        projectDescription
+        projectMedia {
+          altText
+          mediaItemUrl
+        }
+        projectTitle
+      }
+    }
   }
 `;
 
@@ -342,6 +353,7 @@ function App() {
                   <OurResearch
                     our_research_data={data.allOurResearchPage.nodes[0]}
                     active_projects_data={data.researchProjects.nodes}
+                    past_research={data.pastResearchProjects.nodes}
                   />
                 }
               />

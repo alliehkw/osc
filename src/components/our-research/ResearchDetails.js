@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import HighlightedResearch from "./HighlightedResearch";
+import PastResearch from "./PastResearch.js";
 // TO DO: figure out what to do about past research studies
-function ResearchDetails({ our_research_data, active_projects_data }) {
+function ResearchDetails({
+  our_research_data,
+  active_projects_data,
+  past_research,
+}) {
   const [hideShowResearch, setHideShowResearch] = useState({
     current: true,
     ongoing: false,
@@ -9,7 +14,6 @@ function ResearchDetails({ our_research_data, active_projects_data }) {
   });
   const currentProjects = [];
   const ongoingProjects = [];
-  const pastProejcts = [];
 
   active_projects_data.forEach((project) => {
     if (project.typeOfProject[0] === "current") {
@@ -26,7 +30,6 @@ function ResearchDetails({ our_research_data, active_projects_data }) {
       ongoing: researchType === "ongoing",
       past: researchType === "past",
     };
-    console.log(hideShowTemp);
     setHideShowResearch(hideShowTemp);
   }
   return (
@@ -81,7 +84,10 @@ function ResearchDetails({ our_research_data, active_projects_data }) {
           />
         ) : null}
         {hideShowResearch.past ? (
-          <HighlightedResearch title={our_research_data.pastResearchTitle} />
+          <PastResearch
+            title={our_research_data.pastResearchTitle}
+            project_data={past_research}
+          />
         ) : null}
       </div>
     </div>
