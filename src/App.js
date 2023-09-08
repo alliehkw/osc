@@ -277,7 +277,7 @@ const app_data = gql`
         typeOfProject
       }
     }
-    pastResearchProjects {
+    pastResearchProjects(first: 500) {
       nodes {
         projectAuthor
         projectDescription

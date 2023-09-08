@@ -173,3 +173,20 @@ p.project-content {
     flex-shrink: 0;
     margin-bottom: 1.5em;
 }
+
+.project-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: auto;
+    width: 24em;
+  }
+  
+  .project-media img {
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+  }
