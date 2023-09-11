@@ -1,5 +1,5 @@
 function PastResearch({ title, project_data }) {
-  // Function to truncate the title if it's too long. Function cuts off at a full word.
+  // Function to truncate t he title if it's too long. Function cuts off at a full word.
   console.log(project_data);
   function truncate(str, n) {
     if (str.length <= n) {
